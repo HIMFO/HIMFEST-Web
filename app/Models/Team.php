@@ -10,6 +10,8 @@ class Team extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $table = 'teams';
+
     /**
      * The attributes that are mass assignable.
      *

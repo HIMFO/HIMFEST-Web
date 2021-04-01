@@ -46,7 +46,6 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
         ]);
 
-
         $team = Team::create([
             'name' => $request->name,
             'leader_id' => $member->id,

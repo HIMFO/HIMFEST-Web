@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Admin::create([
+            'name' => 'Stefano Christian Wiryana',
+            'email' => 'stefano.wiryana@binus.ac.id',
+            'password' => HASH::make('himfo000'),
+        ]);
+
+        Admin::create([
+            'name' => 'Leonardo Wijaya',
+            'email' => 'leonardo.wijaya003@binus.ac.id',
+            'password' => HASH::make('himfo003'),
+        ]);
     }
 }
