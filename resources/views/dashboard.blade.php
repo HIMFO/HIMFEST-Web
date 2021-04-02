@@ -25,7 +25,7 @@
                         <div class="mt-4">
                             <x-label for="file" :value="__('Submission')" />
 
-                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required />
+                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file', $team->file_path)" required />
                         </div>
                         <input id="type" type="hidden" name="type" value="submission" />
 
@@ -35,6 +35,9 @@
                         </x-button>
                     </form>
                 </div>
+                <a href="/dashboard/download-file">
+                    Download File
+                </a>
             </div>
         </div>
     </div>

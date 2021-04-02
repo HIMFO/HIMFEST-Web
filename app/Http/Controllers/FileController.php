@@ -21,7 +21,7 @@ class FileController extends Controller
         
         $team = Team::find(Auth::user()->id);
 
-        $fileName = time().'_'.$request->file->extension();
+        $fileName = time().'_'.$request->file->getClientOriginalName();
 
         if($request->type == 'submission') {
             $file = File::create([
@@ -35,7 +35,7 @@ class FileController extends Controller
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
-                'file_path' => $request->file->storeAs(public_path('student-cards'), $fileName),
+                'file_path' => $request->file->move(public_path('student-cards'), $fileName),
             ]);
             $member = Member::find($request->member_id);
             $member->student_card_filepath = $file->file_path;
@@ -45,5 +45,12 @@ class FileController extends Controller
         return back()
             ->with('success','File has been uploaded.')
             ->with('file', $fileName);
+    }
+
+    public function download() {
+        $team = Team::find(Auth::user()->id);
+        $file = File::where('file_path', $team->submission_file_path)->first();
+
+        return response()->download($file->file_path, $file->name);
     }
 }

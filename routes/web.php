@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FileController;
 
 /*
@@ -18,15 +19,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [TeamController::class, 'create'])
+    ->middleware(['auth'])
+    ->name('dashboard');
 
 Route::get('/dashboard/upload-file', [FileController::class, 'create'])
-    ->middleware(['auth'])->name('dashboard.upload-file');
+    ->middleware(['auth'])
+    ->name('dashboard.upload-file');
 
 Route::post('/dashboard/upload-file', [FileController::class, 'store'])
-    ->middleware(['auth'])->name('dashboard.upload-file');
+    ->middleware(['auth'])
+    ->name('dashboard.upload-file');
+
+Route::get('/dashboard/download-file', [FileController::class, 'download'])
+    ->middleware(['auth'])
+    ->name('dashboard.download-file');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
