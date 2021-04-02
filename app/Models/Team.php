@@ -23,6 +23,7 @@ class Team extends Authenticatable
         'name',
         'password',
         'referrer',
+        'submission_file_path'
     ];
 
     /**

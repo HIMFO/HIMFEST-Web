@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team;
-use App\Models\File;
 
-class Member extends Model
+class File extends Model
 {
     use HasFactory;
 
-    protected $table = 'members';
+    protected $table = 'files';
     protected $primaryKey = 'id';
     
     /**
@@ -22,13 +21,7 @@ class Member extends Model
 
     protected $fillable = [
         'name',
-        'email',
-        'lineid',
-        'phone',
-        'student_card_filepath'
+        'type',
+        'file_path'
     ];
-
-    public function team() {
-        return $this->belongsTo(Team::class);
-    }
 }
