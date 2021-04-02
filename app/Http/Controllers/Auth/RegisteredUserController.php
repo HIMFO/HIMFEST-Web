@@ -34,12 +34,19 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255|unique:teams',
+            'name' => 'required|string|max:255',
             'leader_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:members',
+            'category' => 'required|string|max:255',
             'referrer' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:8',
         ]);
+
+        if(Team::where('name','=', $request->name)->exists()){
+            if(Team::where('category','=',$request->category)->exists()){
+                return back()->with('fail','Team name has already been used.');
+            }
+        }
 
         $member = Member::create([
             'name' => $request->leader_name,
@@ -48,13 +55,16 @@ class RegisteredUserController extends Controller
 
         $team = Team::create([
             'name' => $request->name,
-            'leader_id' => $member->id,
+            'category' => $request->category,
             'referrer' => $request->referrer,
             'password' => Hash::make($request->password),
         ]);
 
         $member->team_id = $team->id;
         $member->save();
+
+        $team->leader_id = $member->id;
+        $team->save();
 
         Auth::login($team);
 

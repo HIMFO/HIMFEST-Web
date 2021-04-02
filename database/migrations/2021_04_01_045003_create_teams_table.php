@@ -18,6 +18,7 @@ class CreateTeamsTable extends Migration
             $table->string('name', 255)->unique();
             $table->integer('leader_id')->nullable()->unsigned()->index();
             $table->string('password');
+            $table->string('category', 255)->default('SMA/SMK');
             $table->string('referrer', 255)->default('HIMFO');
             $table->string('submission_file_path', 255)->nullable();
             $table->boolean('verified')->default(0);

@@ -32,12 +32,25 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+            
+            <!-- Category -->
+            <div class="mt-4">
+                <x-label for="category" :value="__('Category')" />
+
+                <x-select id="category" class="block mt-1 w-full" name="category" :value="old('category')" required>
+                    <option value="SMA/SMK">SMA/SMK</option> 
+                    <option value="Mahasiswa">Mahasiswa</option> 
+                </x-select>
+            </div>
 
             <!-- Referrer -->
             <div class="mt-4">
                 <x-label for="referrer" :value="__('From Whom Did You Find Out About HIMFEST?')" />
 
-                <x-select id="referrer" class="block mt-1 w-full" type="referrer" name="referrer" :value="old('referrer')" required />
+                <x-select id="referrer" class="block mt-1 w-full" name="referrer" :value="old('referrer')" required>
+                    <option value="HIMFO">HIMFO</option> 
+                    <option value="HIMTI">HIMTI</option> 
+                </x-select>
             </div>
 
             <!-- Password -->

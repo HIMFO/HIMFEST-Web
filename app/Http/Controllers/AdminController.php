@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Team;
 
 class AdminController extends Controller
 {
     public function create() {
-        return view('admin.dashboard', ['teams' => $teams, 'members' => $members]);
+        $teams = Team::get();
+
+        return view('admin.dashboard', ['teams' => $teams]);
     }
 }
