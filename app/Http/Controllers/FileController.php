@@ -27,24 +27,26 @@ class FileController extends Controller
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
-                'file_path' => $request->file->move(public_path('submissions'), $fileName),
+                'file_path' => $request->file->move(public_path('storage/submissions'), $fileName),
             ]);
             $team->submission_file_path = $file->file_path;
             $team->save();
+
+            return back()
+            ->with('success','File has been uploaded.')
+            ->with('file', $fileName);
         } else {
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
-                'file_path' => $request->file->move(public_path('student-cards'), $fileName),
+                'file_path' => $request->file->move(public_path('storage/student-cards'), $fileName),
             ]);
-            $member = Member::find($request->member_id);
+            $member = Member::find($request->id);
             $member->student_card_filepath = $file->file_path;
             $member->save();
+
+            return app('App\Http\Controllers\TeamController')->create();
         }
-        
-        return back()
-            ->with('success','File has been uploaded.')
-            ->with('file', $fileName);
     }
 
     public function download() {

@@ -23,6 +23,10 @@ Route::get('/dashboard', [TeamController::class, 'create'])
     ->middleware(['auth'])
     ->name('dashboard');
 
+Route::post('/dashboard/update-member', [TeamController::class, 'updateMember'])
+    ->middleware(['auth'])
+    ->name('dashboard.update-member');
+
 Route::get('/dashboard/upload-file', [FileController::class, 'create'])
     ->middleware(['auth'])
     ->name('dashboard.upload-file');
