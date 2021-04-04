@@ -23,7 +23,10 @@ class Team extends Authenticatable
         'name',
         'password',
         'referrer',
-        'submission_file_path'
+        'payment_proof_file_path',
+        'submission_file_path',
+        'payment_status',
+        'verified',
     ];
 
     /**

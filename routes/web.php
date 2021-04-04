@@ -35,7 +35,7 @@ Route::post('/dashboard/upload-file', [FileController::class, 'store'])
     ->middleware(['auth'])
     ->name('dashboard.upload-file');
 
-Route::get('/dashboard/download-file', [FileController::class, 'download'])
+Route::post('/dashboard/download-file', [FileController::class, 'download'])
     ->middleware(['auth'])
     ->name('dashboard.download-file');
 

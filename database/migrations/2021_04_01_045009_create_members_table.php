@@ -20,7 +20,7 @@ class CreateMembersTable extends Migration
             $table->string('email', 255);
             $table->string('lineid', 255)->nullable();
             $table->string('phone', 255)->nullable();
-            $table->string('student_card_filepath', 255)->nullable();
+            $table->string('student_card_file_path', 255)->nullable();
             $table->boolean('verified')->default(0);
             $table->timestamps();
         });

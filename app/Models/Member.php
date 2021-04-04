@@ -25,7 +25,8 @@ class Member extends Model
         'email',
         'lineid',
         'phone',
-        'student_card_filepath'
+        'student_card_file_path',
+        'verified',
     ];
 
     public function team() {

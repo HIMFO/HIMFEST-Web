@@ -7,21 +7,41 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    
-                    @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-block">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>{{ $message }}</strong>
-                    </div>
-                    @endif
-                    
+
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div>
+            @endif
+
+            <div class="flex flex-row space-x-3">
+                <div class="flex-1 p-6 bg-white border-b border-gray-200">
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
                         @csrf
 
-                        Submit file here!
+                        Upload your payment proof here!
+                        <div class="mt-4">
+                            <x-label for="file" :value="__('Payment Proof')" />
+
+                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required />
+                        </div>
+                        <input id="type" type="hidden" name="type" value="payment_proof" />
+
+                        <x-button class="mt-2">
+                            {{ __('Submit') }}                                
+                        </x-button>
+                    </form>
+                    <x-download-button :type="__('payment_proof')" class="mt-2" />
+                </div>
+
+                <div class="flex-1 p-6 bg-white border-b border-gray-200">
+                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                    <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
+                        @csrf
+
+                        Submit your work here!
                         <div class="mt-4">
                             <x-label for="file" :value="__('Submission')" />
 
@@ -29,21 +49,16 @@
                         </div>
                         <input id="type" type="hidden" name="type" value="submission" />
 
-                        <div class="flex items-center justify-start mt-3">
-                            <x-button>
-                                {{ __('Submit') }}                                
-                            </x-button>
-
-                            <a class="ml-3 underline text-sm text-blue-600 hover:text-gray-900" href="{{ route('dashboard.download-file') }}">
-                                {{ __('Download File') }}
-                            </a>
-                        </div>
+                        <x-button class="mt-2">
+                            {{ __('Submit') }}                                
+                        </x-button>
                     </form>
+                    <x-download-button :type="__('submission')" class="mt-2" />
                 </div>
             </div>
 
             <div class="flex flex-row space-x-4">                
-                <div class="mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     First Member (Team Leader)
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -54,7 +69,7 @@
                         <div>
                             <x-label for="name" :value="__('Full Name')" />
 
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', $team->members[0]->name)" required disabled="{{ $team->members[0]->verified }}" autofocus />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', $team->members[0]->name)" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
 
                         <!-- Email Address -->
@@ -68,14 +83,14 @@
                         <div class="mt-4">
                             <x-label for="lineid" :value="__('Line ID')" />
 
-                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', $team->members[0]->lineid ?? '')" required disabled="{{ $team->members[0]->verified }}" autofocus />
+                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', $team->members[0]->lineid ?? '')" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
 
                         <!-- Phone Number -->
                         <div class="mt-4">
                             <x-label for="phone" :value="__('Phone Number')" />
 
-                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', $team->members[0]->phone ?? '')" required disabled="{{ $team->members[0]->verified }}" autofocus />
+                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', $team->members[0]->phone ?? '')" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
                         
                         <div class="mt-4">
@@ -93,7 +108,7 @@
                     </form>
                 </div>
 
-                <div class="mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     Second Member
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -104,7 +119,7 @@
                         <div>
                             <x-label for="name" :value="__('Full Name')" />
 
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[1]) ? $team->members[1]->name : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" autofocus />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[1]) ? $team->members[1]->name : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
                         </div>
 
                         <!-- Email Address -->
@@ -118,14 +133,14 @@
                         <div class="mt-4">
                             <x-label for="lineid" :value="__('Line ID')" />
 
-                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[1]) ? $team->members[1]->lineid : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" autofocus />
+                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[1]) ? $team->members[1]->lineid : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
                         </div>
 
                         <!-- Phone Number -->
                         <div class="mt-4">
                             <x-label for="phone" :value="__('Phone Number')" />
 
-                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[1]) ? $team->members[1]->phone : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" autofocus />
+                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[1]) ? $team->members[1]->phone : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
                         </div>
                         
                         <div class="mt-4">
@@ -143,7 +158,7 @@
                     </form>
                 </div>
 
-                <div class="mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     Third Member
                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -154,7 +169,7 @@
                         <div>
                             <x-label for="name" :value="__('Full Name')" />
 
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[2]) ? $team->members[2]->name : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" autofocus />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[2]) ? $team->members[2]->name : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
                         </div>
 
                         <!-- Email Address -->
@@ -168,14 +183,14 @@
                         <div class="mt-4">
                             <x-label for="lineid" :value="__('Line ID')" />
 
-                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[2]) ? $team->members[2]->lineid : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" autofocus />
+                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[2]) ? $team->members[2]->lineid : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
                         </div>
 
                         <!-- Phone Number -->
                         <div class="mt-4">
                             <x-label for="phone" :value="__('Phone Number')" />
 
-                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[2]) ? $team->members[2]->phone : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" autofocus />
+                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[2]) ? $team->members[2]->phone : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
                         </div>
                         
                         <div class="mt-4">
@@ -186,7 +201,7 @@
 
                         <input id="type" type="hidden" name="type" value="submission" />
                         <x-input id='id' type="hidden" name='id' value='{{ isset($team->members[2]) ? $team->members[2]->id : null }}' /> 
-                        <x-input id='type' type="hidden" name='type' value='student card' /> 
+                        <x-input id='type' type="hidden" name='type' value='student_card' /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
                         </x-button>

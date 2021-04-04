@@ -18,12 +18,18 @@ class DatabaseSeeder extends Seeder
         Admin::create([
             'name' => 'Stefano Christian Wiryana',
             'email' => 'stefano.wiryana@binus.ac.id',
-            'password' => HASH::make('himfo000'),
+            'password' => HASH::make('himfo001'),
         ]);
 
         Admin::create([
             'name' => 'Leonardo Wijaya',
             'email' => 'leonardo.wijaya003@binus.ac.id',
+            'password' => HASH::make('himfo002'),
+        ]);
+
+        Admin::create([
+            'name' => 'Jonathan Evan Sampurna',
+            'email' => 'jonathan.sampurna@binus.ac.id',
             'password' => HASH::make('himfo003'),
         ]);
     }
