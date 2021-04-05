@@ -99,9 +99,8 @@
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
 
-                        <input id="type" type="hidden" name="type" value="submission" />
-                        <x-input id='id' type="hidden" name='id' value='{{ $team->members[0]->id ?? null }}' /> 
-                        <x-input id='type' type="hidden" name='type' value='student card' /> 
+                        <x-input id="id" type="hidden" name="id" value='{{ $team->members[0]->id ?? null }}' /> 
+                        <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
                         </x-button>
@@ -119,39 +118,38 @@
                         <div>
                             <x-label for="name" :value="__('Full Name')" />
 
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[1]) ? $team->members[1]->name : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[1]) ? $team->members[1]->name : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
 
                         <!-- Email Address -->
                         <div class="mt-4">
                             <x-label for="email" :value="__('Email')" />
 
-                            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', isset($team->members[1]) ? $team->members[1]->email : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
+                            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', isset($team->members[1]) ? $team->members[1]->email : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
                         
                         <!-- Line ID -->
                         <div class="mt-4">
                             <x-label for="lineid" :value="__('Line ID')" />
 
-                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[1]) ? $team->members[1]->lineid : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
+                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[1]) ? $team->members[1]->lineid : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
 
                         <!-- Phone Number -->
                         <div class="mt-4">
                             <x-label for="phone" :value="__('Phone Number')" />
 
-                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[1]) ? $team->members[1]->phone : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
+                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[1]) ? $team->members[1]->phone : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
                         
                         <div class="mt-4">
                             <x-label for="file" :value="__('Student Card')" />
 
-                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : null }}" />
+                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
 
-                        <input id="type" type="hidden" name="type" value="submission" />
-                        <x-input id='id' type="hidden" name='id' value='{{ isset($team->members[1]) ? $team->members[1]->id : null }}' /> 
-                        <x-input id='type' type="hidden" name='type' value='student card' /> 
+                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[1]) ? $team->members[1]->id : null }}" /> 
+                        <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
                         </x-button>
@@ -169,39 +167,38 @@
                         <div>
                             <x-label for="name" :value="__('Full Name')" />
 
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[2]) ? $team->members[2]->name : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name', isset($team->members[2]) ? $team->members[2]->name : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
 
                         <!-- Email Address -->
                         <div class="mt-4">
                             <x-label for="email" :value="__('Email')" />
 
-                            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', isset($team->members[2]) ? $team->members[2]->email : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
+                            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', isset($team->members[2]) ? $team->members[2]->email : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
                         
                         <!-- Line ID -->
                         <div class="mt-4">
                             <x-label for="lineid" :value="__('Line ID')" />
 
-                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[2]) ? $team->members[2]->lineid : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
+                            <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid', isset($team->members[2]) ? $team->members[2]->lineid : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
 
                         <!-- Phone Number -->
                         <div class="mt-4">
                             <x-label for="phone" :value="__('Phone Number')" />
 
-                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[2]) ? $team->members[2]->phone : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
+                            <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[2]) ? $team->members[2]->phone : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
                         
                         <div class="mt-4">
                             <x-label for="file" :value="__('Student Card')" />
 
-                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : null }}" />
+                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
 
-                        <input id="type" type="hidden" name="type" value="submission" />
-                        <x-input id='id' type="hidden" name='id' value='{{ isset($team->members[2]) ? $team->members[2]->id : null }}' /> 
-                        <x-input id='type' type="hidden" name='type' value='student_card' /> 
+                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[2]) ? $team->members[2]->id : null }}" /> 
+                        <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
                         </x-button>

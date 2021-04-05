@@ -37,6 +37,8 @@ class FileController extends Controller
             ->with('file', $fileName);
         } else if($request->type == 'payment_proof') {
             $file = File::create([
+                'name' => $fileName,
+                'type' => $request->type,
                 'file_path' => $request->file->move(public_path('storage/payment-proofs'), $fileName),
             ]);
             $team->payment_proof_file_path = $file->file_path;

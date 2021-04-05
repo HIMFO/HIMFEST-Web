@@ -28,9 +28,13 @@ class TeamController extends Controller
         $member->team_id = Auth::user()->id;
         $member->save();
 
-        $request->id = $member->id;
+        $request->merge(['id' => $member->id]);
 
-        return app('App\Http\Controllers\FileController')->store($request);
+        app('App\Http\Controllers\FileController')->store($request);
+
+        return back()
+            ->with('success','Member Added')
+            ->with('member', $member->name);
     }
 
     public function updateMember(Request $request) {
