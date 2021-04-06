@@ -34,7 +34,10 @@
             <h3>Admin <span>Panel</span></h3>
         </div>
         <div class="right_area">
-            <a href="{{ route('admin.logout') }}" class="logout_btn">Logout</a>
+        <form action="{{ route('admin.logout') }}" method="POST">
+        @csrf
+            <button class="logout_btn">Logout</button>
+            </form>
         </div>
         @if(Session::get('fail'))
                     <div class="alert alert-danger alert-dismissible">
