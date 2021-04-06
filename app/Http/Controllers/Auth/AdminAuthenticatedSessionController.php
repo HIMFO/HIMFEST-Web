@@ -21,9 +21,8 @@ class AdminAuthenticatedSessionController extends Controller
     public function store(AdminLoginRequest $request)
     {
         $request->authenticate();
-        $data = $request->email;
         $request->session()->regenerate();
-        return redirect('admin/dashboard')->with($data);
+        return redirect('admin/dashboard');
     }
 
     public function destroy(Request $request)
