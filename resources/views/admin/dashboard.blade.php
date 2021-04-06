@@ -51,7 +51,7 @@
     <!-- Sidebar-->
     <div class="sidebar" id="sidebar">
 		<center>
-			<h4></h4>
+			<h4>{{ Auth::user()->name }}</h4>
 		</center>
         <ul id="myTab" role="tablist">
             <li>
