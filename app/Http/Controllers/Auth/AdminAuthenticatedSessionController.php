@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Team;
 use App\Models\Member;
+use App\Models\Admin;
 
 class AdminAuthenticatedSessionController extends Controller
 {
@@ -20,10 +21,9 @@ class AdminAuthenticatedSessionController extends Controller
     public function store(AdminLoginRequest $request)
     {
         $request->authenticate();
-
+        $data = $request->email;
         $request->session()->regenerate();
-
-        return redirect('admin/dashboard');
+        return redirect('admin/dashboard')->with($data);
     }
 
     public function destroy(Request $request)

@@ -36,7 +36,7 @@ Route::post('/dashboard/upload-file', [FileController::class, 'store'])
     ->name('dashboard.upload-file');
 
 Route::post('/dashboard/download-file', [FileController::class, 'download'])
-    ->middleware(['auth'])
+    ->middleware(['auth:admin'])
     ->name('dashboard.download-file');
 
 require __DIR__.'/auth.php';

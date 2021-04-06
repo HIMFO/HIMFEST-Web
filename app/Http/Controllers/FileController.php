@@ -65,16 +65,23 @@ class FileController extends Controller
     }
 
     public function download(Request $request) {
-        $team = Team::find(Auth::user()->id);
+        
         if($request->type == 'submission') {
+            $team = Team::find($request->teamid);
             $file = File::where('file_path', $team->submission_file_path)->first();
         } else if($request->type == 'payment_proof') {
+            $team = Team::find($request->teamid);
             $file = File::where('file_path', $team->payment_proof_file_path)->first();
         } else {
             $member = Member::find($request->id);
             $file = File::where('file_path', $member->student_card_file_path)->first();
         }
 
-        return response()->download($file->file_path, $file->name);
+        if($file){
+            return response()->download($file->file_path, $file->name);
+        }
+        else{
+            return back()->with('fail','There is no chosen file available yet!');
+        }
     }
 }
