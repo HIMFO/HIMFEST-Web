@@ -48,7 +48,7 @@
     <!-- Sidebar-->
     <div class="sidebar" id="sidebar">
 		<center>
-			<h4>{{ $LoggedUserInfo['name'] }}</h4>
+			<h4></h4>
 		</center>
         <ul id="myTab" role="tablist">
             <li>
