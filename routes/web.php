@@ -16,7 +16,7 @@ use App\Http\Controllers\FileController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::get('/dashboard', [TeamController::class, 'create'])
