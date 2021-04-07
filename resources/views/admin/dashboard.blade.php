@@ -55,11 +55,12 @@
     <!-- Body content -->
     <div class="container">
         <div class="row">
+            <div class="col-sm-1"></div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Jumlah Team</h5>
-                        <p class="card-text">{{$team->count()}}</p>
+                        <h5 class="card-title card-tittlec">Jumlah Team</h5>
+                        <p class="card-text card-textc">{{$team->count()}}</p>
                     </div>
                 </div>
             </div>
@@ -67,8 +68,8 @@
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Jumlah Peserta</h5>
-                        <p class="card-text">{{$member->count()}}</p>
+                        <h5 class="card-title card-tittlec">Jumlah Peserta</h5>
+                        <p class="card-text card-textc">{{$member->count()}}</p>
                     </div>
                 </div>
             </div>

@@ -14,10 +14,14 @@ class Datatable extends Component
 
     public $sortDirection = 'asc';
     public $search = '';
+    public $selectedCategory = null;
 
     public function render()
     {
         $team = Team::query()
+        ->when($this->selectedCategory, function($query) {
+            $query->where('category', $this->selectedCategory);
+        })
         ->search($this->search)
         ->orderBy($this->sortBy, $this->sortDirection)
         ->paginate(10);
