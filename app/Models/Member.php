@@ -32,4 +32,14 @@ class Member extends Model
     public function team() {
         return $this->belongsTo(Team::class);
     }
+
+    public function scopeSearch($query, $val)
+    {
+        return $query
+        ->where('id','like','%'.$val.'%')
+        ->Orwhere('name','like','%'.$val.'%')
+        ->Orwhere('lineid','like','%'.$val.'%')
+        ->Orwhere('phone','like','%'.$val.'%')
+        ->Orwhere('team_id','like','%'.$val.'%');
+    }
 }

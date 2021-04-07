@@ -42,4 +42,11 @@ class Team extends Authenticatable
     public function members() {
         return $this->hasMany(Member::class);
     }
+    
+    public function scopeSearch($query, $val)
+    {
+        return $query
+        ->where('id','like','%'.$val.'%')
+        ->Orwhere('name','like','%'.$val.'%');
+    }
 }

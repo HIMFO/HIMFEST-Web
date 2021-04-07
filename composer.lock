@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7e4f17316979dcc0115637b9b7f7f72",
+    "content-hash": "c68d6fbfd1b1e72f739fc5d0c78c8b98",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -894,6 +894,52 @@
             "time": "2021-03-21T16:25:00+00:00"
         },
         {
+            "name": "kdion4891/laravel-livewire-tables",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kdion4891/laravel-livewire-tables.git",
+                "reference": "47baad20d7b9dc533ce79783c0bea2de15c71bd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kdion4891/laravel-livewire-tables/zipball/47baad20d7b9dc533ce79783c0bea2de15c71bd6",
+                "reference": "47baad20d7b9dc533ce79783c0bea2de15c71bd6",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kdion4891\\LaravelLivewireTables\\Providers\\TableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kdion4891\\LaravelLivewireTables\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Dion",
+                    "email": "kdion4891@icloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A dynamic, responsive Laravel Livewire table component with searching, sorting, checkboxes, and pagination.",
+            "homepage": "https://github.com/kdion4891/laravel-livewire-tables",
+            "support": {
+                "issues": "https://github.com/kdion4891/laravel-livewire-tables/issues",
+                "source": "https://github.com/kdion4891/laravel-livewire-tables/tree/1.6.1"
+            },
+            "time": "2020-03-04T03:13:42+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.35.1",
             "source": {
@@ -1383,16 +1429,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "b0cb782674673a67ddfd5910d2fcb5308bb32857"
+                "reference": "2495387841a3eb03ac62b2c984ccd2574303285b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/b0cb782674673a67ddfd5910d2fcb5308bb32857",
-                "reference": "b0cb782674673a67ddfd5910d2fcb5308bb32857",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/2495387841a3eb03ac62b2c984ccd2574303285b",
+                "reference": "2495387841a3eb03ac62b2c984ccd2574303285b",
                 "shasum": ""
             },
             "require": {
@@ -1443,7 +1489,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.4.1"
+                "source": "https://github.com/livewire/livewire/tree/v2.4.2"
             },
             "funding": [
                 {
@@ -1451,7 +1497,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-22T14:03:36+00:00"
+            "time": "2021-04-04T15:46:50+00:00"
         },
         {
             "name": "monolog/monolog",

@@ -3,20 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     min-height: 50vh;
     background-color: #fff;
 }
 
-header{
-    position: fixed;
-    background: #22242A;
+header {
+    position: relative;
+    background: #22242a;
     padding: 20px;
     width: 100%;
     height: 60px;
 }
 
-.left_area h3{
+.left_area h3 {
     color: #fff;
     margin: 0;
     text-transform: uppercase;
@@ -24,13 +24,13 @@ header{
     font-weight: 900;
 }
 
-.left-area span{
-    color: #1DC4E7;
+.left-area span {
+    color: #1dc4e7;
 }
 
-.logout_btn{
+.logout_btn {
     padding: 5px;
-    background: #2F323A;
+    background: #2f323a;
     text-decoration: none;
     float: right;
     margin-top: -30px;
@@ -43,104 +43,15 @@ header{
     transition-property: background;
 }
 
-.logout_btn:hover{
+.logout_btn:hover {
     background: #000;
     text-decoration: none;
     color: #fff;
 }
 
-.sidebar{
-	background: #2F323A;
-	margin-top: 60px;
-	padding-top: 30px;
-    margin-left : -300px;
-	position: fixed;
-	left: 0;
-	width: 250px;
-	height: 100%;
-	transition: 0.5s;
-}
-
-.sidebar h4{
-	color: #ccc;
-	margin-top: 0;
-	margin-bottom: 20px;
-}
-
-.sidebar a{
-	color: #fff;
-	display: block;
-	width: 100%;
-	line-height: 60px;
-	text-decoration: none;
-	padding-left: 40px;
-	box-sizing: border-box;
-	transition: 0.5s;
-	transition-property: background;
-}
-
-.sidebar a:hover{
-	background: #19B3D3;
-}
-
-
-.nav-link{
-    font-size: 1.25em;
-}
-.nav-link:active,
-.nav-link:focus,
-.nav-link:hover{
-    background-color: #ffffff26;
-}
-
-.my-container {
-    margin-left: 3%;
-    padding-top : 8%;
-    transition: 0.4s;
-}
-.active-nav{
-    margin-left: 0;
-}
-.active-cont{
-    margin-left: 250px;
-}
-#menu-btn{
-	z-index: 1;
-	color: #fff;
-	position: fixed;
-	cursor: pointer;
-	left: 300px;
-    margin-top: -10px;
-	font-size: 20px;
-	transition: 0.5s;
-	transition-property: color;
-}
-
-.menu-btn:hover{
-    color: #19B3D3;;
-}
-
-.fas {
-    font-size: 20px;
-}
-
-.fa-check{
-    color: #fff;
-}
-
-.fa-times{
-    color: #fff;
-}
-
-.update_btn {
-    font-size: 100%;
-    border: 0;
-    padding: 0;
-    margin-left: 0;
-    background: none;
-    margin-left: 12%;
-    margin-right: 10%;
-    margin-bottom: 4%;
+.team-table {
+    position: relative;
+    top: 250px;
 }
 
 .download_btn {
@@ -148,4 +59,34 @@ header{
     border: 0;
     background: none;
     padding-left: 45%;
+}
+
+.card {
+    position: relative;
+    top: 125px;
+}
+
+.h3-team {
+    position: relative;
+    top: 250px;
+}
+
+.member-table {
+    position: relative;
+    top: 450px;
+}
+
+.h3-member {
+    position: relative;
+    top: 450px;
+}
+
+.team-search {
+    position: relative;
+    top: 230px;
+}
+
+.member-search {
+    position: relative;
+    top: 430px;
 }
