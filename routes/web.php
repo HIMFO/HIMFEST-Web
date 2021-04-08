@@ -39,5 +39,9 @@ Route::post('/dashboard/download-file', [FileController::class, 'download'])
     ->middleware(['auth:admin'])
     ->name('dashboard.download-file');
 
+Route::post('/dashboard/verify-file', [FileController::class, 'verify'])
+    ->middleware(['auth:admin'])
+    ->name('dashboard.verify-file');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

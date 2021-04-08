@@ -161,6 +161,13 @@ header {
     padding-left: 45%;
 }
 
+.verify_btn {
+    font-size: 150%;
+    border: 0;
+    background: none;
+    padding-left: 45%;
+}
+
 .card {
     position: relative;
     top: 20px;
@@ -190,6 +197,7 @@ header {
     font-size: 40px;
     color: red;
     text-align: center;
+    font-weight: bold;
 }
 
 /* Data Table Template CSS */

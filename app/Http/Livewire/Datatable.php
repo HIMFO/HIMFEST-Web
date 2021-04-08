@@ -15,12 +15,18 @@ class Datatable extends Component
     public $sortDirection = 'asc';
     public $search = '';
     public $selectedCategory = null;
+    public $selectedStatus = null;
+
+    protected $paginationTheme = 'bootstrap';
 
     public function render()
     {
         $team = Team::query()
         ->when($this->selectedCategory, function($query) {
             $query->where('category', $this->selectedCategory);
+        })
+        ->when($this->selectedStatus, function($query) {
+            $query->where('payment_status', $this->selectedStatus);
         })
         ->search($this->search)
         ->orderBy($this->sortBy, $this->sortDirection)

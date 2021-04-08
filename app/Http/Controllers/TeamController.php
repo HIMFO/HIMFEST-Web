@@ -47,7 +47,7 @@ class TeamController extends Controller
         ]);
 
         // if member doesn't exist, create new
-        if(!isset($request->id)) {
+        if($request->id == -1) {
             return $this->addNewMember($request);
         }
 

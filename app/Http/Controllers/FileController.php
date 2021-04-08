@@ -73,7 +73,7 @@ class FileController extends Controller
             $team = Team::find($request->teamid);
             $file = File::where('file_path', $team->payment_proof_file_path)->first();
         } else {
-            $member = Member::find($request->id);
+            $member = Member::find($request->teamid);
             $file = File::where('file_path', $member->student_card_file_path)->first();
         }
 
@@ -82,6 +82,24 @@ class FileController extends Controller
         }
         else{
             return back()->with('fail','There is no chosen file available yet!');
+        }
+    }
+
+    public function verify(Request $request) {
+        
+        if($request->type == 'team') {
+            $team = Team::find($request->teamid);
+            $team->payment_status = $request->status;
+            $team->save();
+
+            return back()->with('success','Team has been successfully verified!');
+        }
+        else if($request->type == 'member') {
+            $member = Member::find($request->teamid);
+            $member->verified = $request->status;
+            $member->save();
+
+            return back()->with('success','Member has been successfully verified!');
         }
     }
 }

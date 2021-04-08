@@ -6,11 +6,20 @@
                                 <h3 class="title-5 m-b-35">Members : {{ $member->count() }}</h3>
                                 <div class="table-data__tool">
                                     <div class="table-data__tool-left">
-                                        <div class="rs-select2--light rs-select2--sm">
-                                        <p>Filter By: </p>
+                                    <div class="rs-select2--light rs-select2--sm">
+                                        <p>Filter By Category: </p>
                                             <select class="form-control form-control-sm" wire:model="selectedCategory">
-                                                <option selected value="SMA/SMK">SMA/SMK</option>
+                                                <option selected value="">All</option>
+                                                <option value="SMA/SMK">SMA/SMK</option>
                                                 <option value="Mahasiswa">Mahasiswa</option>
+                                            </select>
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                        <p>Filter By Status: </p>
+                                            <select class="form-control form-control-sm" wire:model="selectedStatus">
+                                                <option selected value="">All</option>
+                                                <option value= 0>Pending</option>
+                                                <option value="1">Verified</option>
                                             </select>
                                         </div>
                                             <div class="rs-select2--light rs-select2--sm">
@@ -30,7 +39,9 @@
                             <th scope="col">Email</th>
                             <th scope="col">Line ID</th>
                             <th scope="col">Phone Number</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Download Student Card</th>
+                            <th scope="col">Validation</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -40,12 +51,50 @@
                             <td>{{  $members['team_id'] }}</td>
                             <td>{{  $members['name'] }}</td>
                             <td>{{  $members['email'] }}</td>
-                            <td>{{  $members['lineid'] }}</td>
-                            <td>{{  $members['phone'] }}</td>
+                            <td><?php $check = $members['lineid'];
+                            if($check == NULL){
+                                echo "-";
+                            }else{
+                                echo $check;
+                            }?></td>
+                            <td><?php $check = $members['phone'];
+                            if($check == NULL){
+                                echo "-";
+                            }else{
+                                echo $check;
+                            }?></td>
+                            <td><?php $check = $members['verified'];
+                            if($check == '0'){
+                                echo "<span class='status--denied'>". "Unverified" . "</span>";
+                            }else{
+                                echo "<span class='status--process'>". "Verified" . "</span>";
+                            }?></td>
                             <td><form action="{{ route('dashboard.download-file') }}" method="POST">
                             @csrf
                                 <input id="teamid" type="hidden" name="teamid" value="{{  $members['id'] }}" />
-                                <button type="submit" class="download_btn"><i class="fas fa-download"></i></button></a>
+                                <?php $check = $members['student_card_file_path'];
+                                if(!$check){
+                                    echo "<button type='submit' class='download_btn' disabled><i class='fas fa-download'></i></button>";
+                                }
+                                else{
+                                    echo "<button type='submit' class='download_btn'><i class='fas fa-download'></i></button>";
+                                }?>
+                                </form>
+                            </td>
+                            <td>
+                            <form action="{{ route('dashboard.verify-file') }}" method="POST">
+                            @csrf
+                                <input id="teamid" type="hidden" name="teamid" value="{{  $members['id'] }}" />
+                                <input id="type" type="hidden" name="type" value="member" />
+                                <input id="status" type="hidden" name="status" value="1" />
+                                <?php $check = $members['verified'];
+                                if(!$check){
+                                    echo "<button type='submit' class='verify_btn'><i class='fas fa-check-square'></i></button>";
+                                }
+                                else{
+                                    echo "<button type='submit' class='verify_btn' disabled><i class='fas fa-check-square'></i></button>";
+                                }?>
+                                
                                 </form>
                             </td>
                             </tr>
@@ -56,11 +105,11 @@
                                 <!-- END DATA TABLE -->
                             </div>
                         </div>
-                    <!-- Pagination>
+                    <!-- Pagination -->
                         <div class="container">
                             <p>
                                 {{$member->links()}}
                             </p>
                         </div>
-                        <Pagination -->
+                        <!-- Pagination -->
 </div>

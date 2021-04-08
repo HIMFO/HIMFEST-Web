@@ -8,10 +8,19 @@
                                 <div class="table-data__tool">
                                     <div class="table-data__tool-left">
                                         <div class="rs-select2--light rs-select2--sm">
-                                        <p>Filter By: </p>
+                                        <p>Filter By Category: </p>
                                             <select class="form-control form-control-sm" wire:model="selectedCategory">
-                                                <option selected value="SMA/SMK">SMA/SMK</option>
+                                                <option selected value="">All</option>
+                                                <option  value="SMA/SMK">SMA/SMK</option>
                                                 <option value="Mahasiswa">Mahasiswa</option>
+                                            </select>
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                        <p>Filter By Status: </p>
+                                            <select class="form-control form-control-sm" wire:model="selectedStatus">
+                                                <option selected value="">All</option>
+                                                <option value='pending'>Pending</option>
+                                                <option value="Verified">Verified</option>
                                             </select>
                                         </div>
                                         <div class="rs-select2--light rs-select2--sm">
@@ -29,14 +38,12 @@
                                                 <th scope="col" wire:click="sortBy('name')" style="cursor: pointer;">Team Name
                                                 @include('partials._sort-icon',['field'=>'name'])</th>
                                                 <th scope="col">Leader ID</th>
-                                                <th scope="col" wire:click="sortBy('category')" style="cursor: pointer;">Category
-                                                @include('partials._sort-icon',['field'=>'category'])</th>
-                                                <th scope="col" wire:click="sortBy('referrer')" style="cursor: pointer;">Referrer
-                                                @include('partials._sort-icon',['field'=>'referrer'])</th>
-                                                <th scope="col" wire:click="sortBy('payment_proof_file_path')" style="cursor: pointer;">Status Pembayaran
-                                                @include('partials._sort-icon',['field'=>'payment_proof_file_path'])</th>
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Referrer</th>
+                                                <th scope="col">Status Pembayaran
                                                 <th scope="col" >Download Answer</th>
                                                 <th scope="col">Download Bukti Bayar</th>
+                                                <th scope="col">Validation</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -47,18 +54,24 @@
                                                 <td>{{  $teams['leader_id'] }}</td>
                                                 <td>{{  $teams['category'] }}</td>
                                                 <td>{{  $teams['referrer'] }}</td>
-                                                <td><?php $check = $teams['payment_proof_file_path'];
-                            if($check == NULL){
-                                echo "<span class='status--denied'>". "Belum bayar" . "</span>";
+                                                <td><?php $check = $teams['payment_status'];
+                            if($check == 'pending'){
+                                echo "<span class='status--denied'>". "Pending" . "</span>";
                             }else{
-                                echo "<span class='status--process'>". "Belum bayar" . "</span>";
+                                echo "<span class='status--process'>". "Verified" . "</span>";
                             }?></td>
                                                 <td>
                             <form action="{{ route('dashboard.download-file') }}" method="POST">
                             @csrf
                                 <input id="teamid" type="hidden" name="teamid" value="{{  $teams['id'] }}" />
                                 <input id="type" type="hidden" name="type" value="submission" />
-                                <button type="submit" class="download_btn"><i class="fas fa-download"></i></button></a>
+                                <?php $check = $teams['submission_file_path'];
+                                if(!$check){
+                                    echo "<button type='submit' class='download_btn' disabled><i class='fas fa-download'></i></button>";
+                                }
+                                else{
+                                    echo "<button type='submit' class='download_btn'><i class='fas fa-download'></i></button>";
+                                }?>
                                 </form>
                             </td>
                             <td>
@@ -66,7 +79,30 @@
                             @csrf
                                 <input id="teamid" type="hidden" name="teamid" value="{{  $teams['id'] }}" />
                                 <input id="type" type="hidden" name="type" value="payment_proof" />
-                                <button type="submit" class="download_btn"><i class="fas fa-download"></i></button></a>
+                                <?php $check = $teams['payment_proof_file_path'];
+                                if(!$check){
+                                    echo "<button type='submit' class='download_btn' disabled><i class='fas fa-download'></i></button>";
+                                }
+                                else{
+                                    echo "<button type='submit' class='download_btn'><i class='fas fa-download'></i></button>";
+                                }?>
+                                
+                                </form>
+                            </td>
+                            <td>
+                            <form action="{{ route('dashboard.verify-file') }}" method="POST">
+                            @csrf
+                                <input id="teamid" type="hidden" name="teamid" value="{{  $teams['id'] }}" />
+                                <input id="type" type="hidden" name="type" value="team" />
+                                <input id="status" type="hidden" name="status" value="1" />
+                                <?php $check = $teams['payment_status'];
+                                if($check == 'pending'){
+                                    echo "<button type='submit' class='verify_btn'><i class='fas fa-check-square'></i></button>";
+                                }
+                                else{
+                                    echo "<button type='submit' class='verify_btn' disabled><i class='fas fa-check-square'></i></button>";
+                                }?>
+                                
                                 </form>
                             </td>
                                             </tr>
@@ -77,13 +113,13 @@
                                 <!-- END DATA TABLE -->
                             </div>
                         </div>
-                        <!-- Pagination>
+                        <!-- Pagination -->
                         <div class="container">
                             <p>
-                                {{$team->links()}}
+                                {{ $team->links() }}
                             </p>
                         </div>
-                        <Pagination -->
+                        <!-- Pagination -->
     
     <!-- End of Team Table -->
 </div>
