@@ -15,14 +15,8 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <!-- TailwindCSS -->
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -40,21 +34,7 @@
                 {{ $slot }}
             </main>
         </div>
-        <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-@livewireStyles
-</head>
-    <body>
-        <div class="container mx-auto">
-            <h1 class="text-3xl text-center my-10">Users</h1>
-        </div>
-
-        <div class="container mx-auto">
-            {{ $slot }}
-        </div>
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
-@livewireScripts
+        
+        @livewireScripts
     </body>
-    
 </html>
