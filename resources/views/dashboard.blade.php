@@ -97,7 +97,7 @@
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
 
-                        <x-input id="id" type="hidden" name="id" value='{{ $team->members[0]->id ?? '-1' }}' /> 
+                        <x-input id="id" type="hidden" name="id" value='{{ $team->members[0]->id ?? null }}' /> 
                         <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
@@ -146,7 +146,7 @@
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
 
-                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[1]) ? $team->members[1]->id : '-1' }}" /> 
+                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[1]) ? $team->members[1]->id : null }}" /> 
                         <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
@@ -195,7 +195,7 @@
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
 
-                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[2]) ? $team->members[2]->id : '-1' }}" /> 
+                        <x-input id="id" type="hidden" name="id" value="{{ isset($team->members[2]) ? $team->members[2]->id : null }}" /> 
                         <x-input id="type" type="hidden" name="type" value="student_card" /> 
                         <x-button class="mt-4">
                             {{ __('Update') }}
