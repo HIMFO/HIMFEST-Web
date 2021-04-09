@@ -22,7 +22,7 @@
                         @csrf
 
                         Upload your payment proof here!
-                        <div class="mt-4">
+                        <div class="my-4">
                             <x-label for="file" :value="__('Payment Proof')" />
 
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required />
@@ -41,7 +41,7 @@
                         @csrf
 
                         Submit your work here!
-                        <div class="mt-4">
+                        <div class="my-4">
                             <x-label for="file" :value="__('Submission')" />
 
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required />
@@ -91,7 +91,7 @@
                             <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', $team->members[0]->phone ?? '')" required disabled="{{ $team->members[0]->verified }}" />
                         </div>
                         
-                        <div class="mt-4">
+                        <div class="my-4">
                             <x-label for="file" :value="__('Student Card')" />
 
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ $team->members[0]->verified }}" />
@@ -140,7 +140,7 @@
                             <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[1]) ? $team->members[1]->phone : '')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
                         </div>
                         
-                        <div class="mt-4">
+                        <div class="my-4">
                             <x-label for="file" :value="__('Student Card')" />
 
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}" />
@@ -189,7 +189,7 @@
                             <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', isset($team->members[2]) ? $team->members[2]->phone : '')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
                         </div>
                         
-                        <div class="mt-4">
+                        <div class="my-4">
                             <x-label for="file" :value="__('Student Card')" />
 
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')" required disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}" />
