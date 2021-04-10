@@ -100,11 +100,11 @@
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           About
         </h1>
-        <div class="w-full mb-4">
+        <div class="w-full mb-12">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="flex flex-wrap justify-center items-center">
-          <div class="w-5/6 sm:w-1/2 p-6">
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6 flex flex-col justify-center items-end">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
               UI/UX Competition
             </h3>
@@ -112,23 +112,24 @@
               Lomba perancangan mockup UI/UX tingkat SMA.
             </p>
           </div>
-
-          <img class="w-1/4" src="{{ asset('images/uiux.jpg') }}" alt="UI/UX Competition">
-        </div>
-        <div class="flex flex-wrap justify-center items-center">
-          <img class="w-1/4" src="{{ asset('images/appdev.jpg') }}" alt="App Development Competition">
-
-          <div class="w-full sm:w-1/2 p-6 mt-6">
-            <div class="align-middle">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                App Development Competition
-              </h3>
-              <p class="text-gray-600 mb-8">
-                Lomba pengembangan aplikasi berbasis web atau mobile tingkat Mahasiswa.
-              </p>
-            </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img class="w-auto sm:h-64 mx-auto" src="{{ asset('images/uiux.jpg') }}" alt="UI/UX Competition">
           </div>
         </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-auto sm:w-1/2 p-6 mt-6">
+            <img class="w-5/6 sm:h-64 mx-auto" src="{{ asset('images/appdev.jpg') }}" alt="App Development Competition">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6 flex flex-col justify-center items-start">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              App Development Competition
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Lomba pengembangan aplikasi berbasis web atau mobile tingkat Mahasiswa.
+            </p>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
