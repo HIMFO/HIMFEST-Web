@@ -19,6 +19,9 @@
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour" href="#about">About</a>
             </li>
+			<li class="mr-3">
+              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour" href="#timeline">Timeline</a>
+            </li>
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour" href="#guidelines">Guidelines</a>
             </li>
@@ -115,6 +118,170 @@
         </div>
       </div>
     </section>
+	
+	<section id ="timeline" class="bg-gray-100 border-b py-8">
+	  <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Timeline
+        </h1>
+		<div class="w-full mb-6">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+		<div class="container">
+          <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-white">
+            <!-- left -->
+            <div class="flex flex-row-reverse md:contents">
+              <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">19 April 2021 - 31 Mei 2021</h3>
+                <p class="leading-tight text-justify">
+                  Pendaftaran
+                </p>
+              </div>
+              <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow">
+				</div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="flex md:contents">
+              <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow">
+				</div>
+              </div>
+              <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">21 Juni 2021</h3>
+                <p class="leading-tight text-justify">
+                  Seminar <i>Improving Society with Code</i>
+                </p>
+              </div>
+            </div>
+            <!-- left -->
+            <div class="flex flex-row-reverse md:contents">
+              <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">22-25 Juni 2021</h3>
+                <p class="leading-tight text-justify">
+                  Workshop
+                </p>
+              </div>
+              <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div
+                  class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"
+                ></div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="flex md:contents">
+              <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div
+                  class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"
+                ></div>
+              </div>
+              <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">21 Juni - 5 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Pelaksanaan Lomba
+                </p>
+              </div>
+            </div>
+			<!-- left -->
+            <div class="flex flex-row-reverse md:contents">
+              <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">1-8 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Pengumpulan karya dan Pernyataan Orisinalitas Karya
+                </p>
+              </div>
+              <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div
+                  class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"
+                ></div>
+              </div>
+            </div>
+			<!-- right -->
+            <div class="flex md:contents">
+              <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow">
+				  </div>
+              </div>
+              <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">9 Juli 2021 - 13 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Penilaian Karya
+                </p>
+              </div>
+            </div>
+			<!-- left -->
+            <div class="flex flex-row-reverse md:contents">
+              <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">13 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Pengumuman Finalis
+                </p>
+              </div>
+              <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div
+                  class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"
+                ></div>
+              </div>
+            </div>
+			<!-- right -->
+            <div class="flex md:contents">
+              <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow">
+				  </div>
+              </div>
+              <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">15 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Presentasi Finalis
+                </p>
+              </div>
+            </div>
+			<!-- left -->
+            <div class="flex flex-row-reverse md:contents">
+              <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+                <h3 class="font-semibold text-lg mb-1">16 Juli 2021</h3>
+                <p class="leading-tight text-justify">
+                  Pengumuman Juara
+                </p>
+              </div>
+              <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                <div class="h-full w-6 flex items-center justify-center">
+                  <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                </div>
+                <div
+                  class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+		</div>
+	</section>
 
     <section id="guidelines" class="bg-gray-100 border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
