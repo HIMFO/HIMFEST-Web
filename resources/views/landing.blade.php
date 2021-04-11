@@ -5,7 +5,7 @@
         <a class="toggleColour flex items-center text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           href="#">
           <img class="w-10 h-10 mr-4" src="{{ asset('images/logo.svg') }}" alt="HIMFEST Logo">
-          HIMFEST
+          <h1>HIMFEST</h1>
         </a>
         <div class="block lg:hidden pr-4">
           <button id="nav-toggle"
@@ -21,23 +21,23 @@
           id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour"
+              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#about">About</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour"
+              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#timeline">Timeline</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour"
+              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#guidelines">Guidelines</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour"
+              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#prizes">Prizes</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4 toggleColour"
+              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="{{ route('login') }}">Login</a>
             </li>
           </ul>
@@ -50,11 +50,11 @@
   </header>
 
   <main>
-    <section id="#" class="pt-16">
+    <section id="#" class="pt-24">
       <div class="container px-4 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
-        <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50" src="images/hero.png" />
+        <div class="w-full md:w-3/5 py-6 text-center flex justify-center items-center">
+          <img class="w-1/2" src="images/hero.png" />
         </div>
         <!--Right Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <div class="relative -mt-12 lg:-mt-24">
+      <div class="relative mt-12 lg:mt-24">
         <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -97,7 +97,7 @@
 
     <section id="about" class="bg-white shadow-xl border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">
           About
         </h1>
         <div class="w-full mb-12">
@@ -105,7 +105,7 @@
         </div>
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6 flex flex-col justify-center items-end">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            <h3 class="text-3xl font-bold leading-none mb-3">
               UI/UX Competition
             </h3>
             <p class="text-gray-600 mb-8">
@@ -121,7 +121,7 @@
             <img class="w-5/6 sm:h-64 mx-auto" src="{{ asset('images/appdev.jpg') }}" alt="App Development Competition">
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6 flex flex-col justify-center items-start">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            <h3 class="text-3xl font-bold leading-none mb-3">
               App Development Competition
             </h3>
             <p class="text-gray-600 mb-8">
@@ -135,7 +135,7 @@
 
     <section id="timeline" class="bg-gray-100 border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">
           Timeline
         </h1>
         <div class="w-full mb-6">
@@ -289,7 +289,7 @@
 
     <section id="guidelines" class="bg-gray-100 border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-8 pb-12">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">
           Guidelines
         </h1>
         <div class="w-full mb-6">
@@ -297,15 +297,15 @@
         </div>
         <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
           <div class="w-full bg-white py-6 rounded-t rounded-b-none overflow-hidden shadow">
-            <div class="w-full text-center font-bold text-xl text-gray-800 px-6">
+            <h2 class="w-full text-center font-bold text-xl px-6">
               UI/UX Competition
-            </div>
+            </h2>
             <div class="mt-3 text-gray-800 text-base px-6 mb-5">
               <ul class="text-sm list-decimal p-4">
                 <li>Peserta WAJIB merupakan siswa aktif SMA IPA/MA IPA/SMK jurusan IT/RPL/TKL.</li>
                 <li>Peserta merupakan tim yang terdiri dari tepat 3 anggota.</li>
                 <li>Semua anggota tim WAJIB mengunggah Kartu Pelajar yang nanti akan diverifikasi oleh admin.</li>
-                <li>Biaya pendaftaran yang HARUS dibayarkan adalah sebesar Rp 75.000/tim dan mengunggah Bukti Transfer
+                <li>Biaya pendaftaran yang HARUS dibayarkan adalah sebesar Rp 50.000/tim dan mengunggah Bukti Transfer
                   yang nanti akan diverifikasi oleh admin.</li>
                 <li>Peserta WAJIB membaca dan memahami seluruh isi dari guidebook.</li>
               </ul>
@@ -314,9 +314,9 @@
         </div>
         <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
           <div class="w-full bg-white py-6 rounded-t rounded-b-none overflow-hidden shadow">
-            <div class="w-full text-center font-bold text-xl text-gray-800 px-6">
+            <h2 class="w-full text-center font-bold text-xl px-6">
               App Development Competition
-            </div>
+            </h2>
             <div class="mt-3 text-gray-800 text-base px-6 mb-5">
               <ul class="text-sm list-decimal p-4">
                 <li>Peserta WAJIB merupakan Mahasiswa aktif jurusan IT.</li>
@@ -339,7 +339,7 @@
 
     <section id="prizes" class="bg-gray-100 py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">
           Prizes
         </h1>
         <div class="w-full mb-4">
@@ -348,9 +348,9 @@
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
           <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
             <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
+              <h2 class="p-8 text-3xl font-bold text-center border-b-4 text-gray-500">
                 2<sup>nd</sup>
-              </div>
+              </h2>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">UI/UX: Rp 300.000 dan Beasiswa DP3 50%</li>
                 <li class="border-b py-4">App Development: Rp 500.000</li>
@@ -359,7 +359,9 @@
           </div>
           <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-6 sm:-mt-6 shadow-lg">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="w-full p-8 text-3xl font-bold text-center">1<sup>st</sup></div>
+              <h2 class="w-full p-8 text-3xl font-bold text-center">
+                1<sup>st</sup>
+              </h2>
               <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
               <ul class="w-full text-center text-base font-bold">
                 <li class="border-b py-6">UI/UX: Rp 400.000 dan Beasiswa DP3 100%</li>
@@ -369,9 +371,9 @@
           </div>
           <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
             <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
+              <h2 class="p-8 text-3xl font-bold text-center border-b-4 text-gray-500">
                 3<sup>rd</sup>
-              </div>
+              </h2>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">UI/UX: Rp 150.000 dan Beasiswa DP3 50%</li>
                 <li class="border-b py-4">App Development: Rp 250.000</li>
@@ -411,16 +413,16 @@
     </svg>
 
     <section id="cta" class="container mx-auto text-center py-6 mb-12">
-      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">
         Join Now!
       </h1>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
-      <h3 class="my-12 text-3xl leading-tight">
+      <p class="my-12 text-3xl text-white leading-tight">
         Tunggu apalagi? Buruan! Daftarkan tim-mu sekarang!
-      </h3>
-      <x-action-button :link="route('register')" class="text-gray-800">
+      </p>
+      <x-action-button :link="route('register')" class="text-gray-800 mb-16">
         {{ __('Register Now') }}
       </x-action-button>
     </section>
@@ -432,32 +434,31 @@
         <div class="flex-1 mb-6 text-black">
           <a class="flex text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
             <img class="w-10 h-10 mr-2" src="{{ asset('images/logo.svg') }}" alt="HIMFEST Logo">
-            HIMFEST
+            <h1>HIMFEST</h1>
           </a>
         </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Contact</p>
+          <h4 class="uppercase md:mb-6">Contact</h4>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="mailto:it.himfo@gmail.com"
-                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Email</a>
+              <a href="mailto:it.himfo@gmail.com" class="no-underline hover:underline text-gray-800">Email</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="https://line.me/R/ti/p/jonathanevans" target="_blank"
-                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Line</a>
+                class="no-underline hover:underline text-gray-800">Line</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="https://wa.me/6285855872872" target="_blank"
-                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Whatsapp</a>
+                class="no-underline hover:underline text-gray-800">Whatsapp</a>
             </li>
           </ul>
         </div>
         <div class="flex-1">
-          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <h4 class="uppercase md:mb-6">Social</h4>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="https://www.instagram.com/himfo.binusmlg/" target="_blank"
-                class="no-underline hover:underline text-gray-800 hover:text-pink-500">Instagram</a>
+                class="no-underline hover:underline text-gray-800">Instagram</a>
             </li>
           </ul>
         </div>

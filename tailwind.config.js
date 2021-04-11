@@ -10,7 +10,6 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                body: ["Lato", "system.ui", "sans-serif"],
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
             },
         },
