@@ -147,7 +147,7 @@
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">19 April 2021 - 31 Mei 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Pendaftaran
                 </p>
               </div>
@@ -170,7 +170,7 @@
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">21 Juni 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Seminar <i>Improving Society with Code</i>
                 </p>
               </div>
@@ -179,7 +179,7 @@
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">22-25 Juni 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Workshop
                 </p>
               </div>
@@ -200,7 +200,7 @@
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">21 Juni - 5 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Pelaksanaan Lomba
                 </p>
               </div>
@@ -209,7 +209,7 @@
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">1-8 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Pengumpulan karya dan Pernyataan Orisinalitas Karya
                 </p>
               </div>
@@ -231,7 +231,7 @@
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">9 Juli 2021 - 13 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Penilaian Karya
                 </p>
               </div>
@@ -240,7 +240,7 @@
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">13 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Pengumuman Finalis
                 </p>
               </div>
@@ -262,7 +262,7 @@
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">15 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Presentasi Finalis
                 </p>
               </div>
@@ -271,7 +271,7 @@
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">16 Juli 2021</h3>
-                <p class="leading-tight text-justify">
+                <p class="leading-tight text-left">
                   Pengumuman Juara
                 </p>
               </div>
