@@ -8,7 +8,7 @@ var navMenu = document.getElementById("nav-toggle");
 
 document.onclick = check;
 function check(e) {
-    var target = (e && e.target) || (event && event.srcElement);
+    var target = e && e.target;
 
     //Nav Menu
     if (!checkParent(target, navMenuDiv)) {
@@ -59,7 +59,7 @@ document.addEventListener("scroll", function () {
             toToggle[i].classList.remove("text-white");
         }
         header.classList.add("shadow");
-        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.remove("bg-transparent");
         navcontent.classList.add("bg-white");
     } else {
         header.classList.remove("bg-white");
@@ -72,9 +72,8 @@ document.addEventListener("scroll", function () {
             toToggle[i].classList.add("text-white");
             toToggle[i].classList.remove("text-gray-800");
         }
-
         header.classList.remove("shadow");
         navcontent.classList.remove("bg-white");
-        navcontent.classList.add("bg-gray-100");
+        navcontent.classList.add("bg-transparent");
     }
 });

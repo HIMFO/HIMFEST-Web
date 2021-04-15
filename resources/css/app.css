@@ -5,6 +5,7 @@
 /* custom css */
 body {
     font-family: "Lato", "Open Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {

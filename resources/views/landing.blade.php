@@ -1,3 +1,6 @@
+<?php
+  use Illuminate\Support\Facades\Auth;
+?>
 <x-guest-layout>
   <header>
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
@@ -19,7 +22,7 @@
         <div
           class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20"
           id="nav-content">
-          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center lg:m-0 mb-10">
             <li class="mr-3">
               <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#about">About</a>
@@ -36,13 +39,19 @@
               <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
                 href="#prizes">Prizes</a>
             </li>
-            <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
-                href="{{ route('login') }}">Login</a>
-            </li>
+            <?php
+              if(!Auth::check()) {
+                echo(
+                  '<li class="mr-3">
+                    <a class="inline-block text-white no-underline hover:text-underline py-2 px-4 toggleColour"
+                      href="/login">Login</a>
+                  </li>'
+                );
+              }
+            ?>
           </ul>
-          <x-action-button :link="route('register')" id="navAction">
-            {{ __('Register') }}
+          <x-action-button :link="Auth::check() ? route('dashboard') : route('register')" id="navAction" class="mt-4">
+            {{ __(Auth::check() ? 'Dashboard' : 'Register') }}
           </x-action-button>
         </div>
       </div>
@@ -51,10 +60,10 @@
 
   <main>
     <section id="#" class="pt-24">
-      <div class="container px-4 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div class="container px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="w-full md:w-3/5 py-6 text-center flex justify-center items-center">
-          <img class="w-1/2" src="images/hero.png" />
+          <img class="w-1/2" src="images/hero.png" alt="HIMFEST 2021" />
         </div>
         <!--Right Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -441,7 +450,7 @@
           <h4 class="uppercase md:mb-6">Contact</h4>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="mailto:it.himfo@gmail.com" class="no-underline hover:underline text-gray-800">Email</a>
+              <a href="mailto:contact@himfobinus.com" class="no-underline hover:underline text-gray-800">Email</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="https://line.me/R/ti/p/jonathanevans" target="_blank"

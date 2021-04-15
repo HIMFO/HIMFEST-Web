@@ -3849,7 +3849,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_components_css__WEBPACK_IMPORTED_MODULE_2__.default);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_utilities_css__WEBPACK_IMPORTED_MODULE_3__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* custom css */\r\nbody {\r\n    font-family: \"Lato\", \"Open Sans\", sans-serif;\r\n}\r\n\r\nh1 {\r\n    color: #ff9b00;\r\n}\r\n\r\nh2,\r\nh3 {\r\n    color: #1c1259;\r\n}\r\n\r\nh4,\r\na:not(.action-button):hover {\r\n    color: #ee4266;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* custom css */\r\nbody {\r\n    font-family: \"Lato\", \"Open Sans\", sans-serif;\r\n    overflow-x: hidden;\r\n}\r\n\r\nh1 {\r\n    color: #ff9b00;\r\n}\r\n\r\nh2,\r\nh3 {\r\n    color: #1c1259;\r\n}\r\n\r\nh4,\r\na:not(.action-button):hover {\r\n    color: #ee4266;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -21797,7 +21797,7 @@ var navMenu = document.getElementById("nav-toggle");
 document.onclick = check;
 
 function check(e) {
-  var target = e && e.target || event && event.srcElement; //Nav Menu
+  var target = e && e.target; //Nav Menu
 
   if (!checkParent(target, navMenuDiv)) {
     // click NOT on the menu
@@ -21850,7 +21850,7 @@ document.addEventListener("scroll", function () {
     }
 
     header.classList.add("shadow");
-    navcontent.classList.remove("bg-gray-100");
+    navcontent.classList.remove("bg-transparent");
     navcontent.classList.add("bg-white");
   } else {
     header.classList.remove("bg-white");
@@ -21866,7 +21866,7 @@ document.addEventListener("scroll", function () {
 
     header.classList.remove("shadow");
     navcontent.classList.remove("bg-white");
-    navcontent.classList.add("bg-gray-100");
+    navcontent.classList.add("bg-transparent");
   }
 });
 })();
