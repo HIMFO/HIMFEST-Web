@@ -442,8 +442,9 @@
       <div class="w-full flex flex-col md:flex-row py-6">
         <div class="flex-1 mb-6 text-black">
           <a class="flex flex-col text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="https://www.dewaweb.com/">
-            <p class="p-0 text-xs">Powered By</p>
+            href="https://www.dewaweb.com/" target="_blank" data-toggle="tooltip"
+            title="Dewaweb adalah penyedia web hosting terbaik di Indonesia (ISO 27001 Certified)">
+            <p class=" p-0 text-xs">Powered By</p>
             <img class="w-36 mr-2" src="{{ asset('images/dewaweb.png') }}" alt="Dewaweb Backlink">
           </a>
         </div>
