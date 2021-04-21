@@ -113,7 +113,7 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6 flex flex-col justify-center items-end">
+          <div class="w-5/6 sm:w-1/2 p-6 flex flex-col justify-center md:items-end">
             <h3 class="text-3xl font-bold leading-none mb-3">
               UI/UX Competition
             </h3>
@@ -441,9 +441,10 @@
     <div class="container mx-auto px-8">
       <div class="w-full flex flex-col md:flex-row py-6">
         <div class="flex-1 mb-6 text-black">
-          <a class="flex text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <img class="w-10 h-10 mr-2" src="{{ asset('images/logo.svg') }}" alt="HIMFEST Logo">
-            <h1>HIMFEST</h1>
+          <a class="flex flex-col text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="https://www.dewaweb.com/">
+            <p class="p-0 text-xs">Powered By</p>
+            <img class="w-36 mr-2" src="{{ asset('images/dewaweb.png') }}" alt="Dewaweb Backlink">
           </a>
         </div>
         <div class="flex-1">
