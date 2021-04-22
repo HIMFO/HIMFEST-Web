@@ -440,14 +440,6 @@
   <footer class="bg-white">
     <div class="container mx-auto px-8">
       <div class="w-full flex flex-col md:flex-row py-6">
-        <div class="flex-1 mb-6 text-black">
-          <a class="flex flex-col text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="https://www.dewaweb.com/" target="_blank" data-toggle="tooltip"
-            title="Dewaweb adalah penyedia web hosting terbaik di Indonesia (ISO 27001 Certified)">
-            <p class=" p-0 text-xs">Powered By</p>
-            <img class="w-36 mr-2" src="{{ asset('images/dewaweb.png') }}" alt="Dewaweb Backlink">
-          </a>
-        </div>
         <div class="flex-1">
           <h4 class="uppercase md:mb-6">Contact</h4>
           <ul class="list-reset mb-6">
@@ -472,6 +464,20 @@
                 class="no-underline hover:underline text-gray-800">Instagram</a>
             </li>
           </ul>
+        </div>
+
+        <div class="flex-1 mb-6 text-black">
+          <a class="flex flex-col text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="https://www.dewaweb.com/" target="_blank">
+            <p class=" p-0 text-xs">Powered By</p>
+            <img class="w-36 mr-2" src="{{ asset('images/dewaweb.png') }}" alt="Dewaweb Backlink">
+          </a>
+          <p class="text-xs text-justify">Dewaweb adalah salah satu layanan cloud hosting di Indonesia yang telah
+            mendapatkan
+            sertifikasi ISO 27001
+            (World Class Information Security). Saat ini Dewaweb telah melayani lebih dari 55,000 pelanggan di seluruh
+            Indonesia dan memberikan dukungan pelanggan Ninja Support 24/7 via helpdesk, telepon, dan live chat kapan
+            pun dibutuhkan.</p>
         </div>
       </div>
   </footer>
