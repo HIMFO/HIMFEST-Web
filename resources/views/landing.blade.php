@@ -340,7 +340,7 @@
           </div>
         </div>
         <div class="w-full flex justify-center mt-auto p-6">
-          <x-action-button :link="asset('guidebook.pdf')" target="_blank" class="gradient text-white">
+          <x-action-button :link="asset('guidebook.pdf')" target="_blank" rel="noopener" class="gradient text-white">
             {{ __('Download Guidebook') }}
           </x-action-button>
         </div>
@@ -447,11 +447,11 @@
               <a href="mailto:contact@himfobinus.com" class="no-underline hover:underline text-gray-800">Email</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="https://line.me/R/ti/p/jonathanevans" target="_blank"
+              <a href="https://line.me/R/ti/p/jonathanevans" target="_blank" rel="noopener"
                 class="no-underline hover:underline text-gray-800">Line</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="https://wa.me/6285855872872" target="_blank"
+              <a href="https://wa.me/6285855872872" target="_blank" rel="noopener"
                 class="no-underline hover:underline text-gray-800">Whatsapp</a>
             </li>
           </ul>
@@ -460,7 +460,7 @@
           <h4 class="uppercase md:mb-6">Social</h4>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="https://www.instagram.com/himfo.binusmlg/" target="_blank"
+              <a href="https://www.instagram.com/himfo.binusmlg/" target="_blank" rel="noopener"
                 class="no-underline hover:underline text-gray-800">Instagram</a>
             </li>
           </ul>
@@ -468,7 +468,7 @@
 
         <div class="flex-1 mb-6 text-black">
           <a class="flex flex-col text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="https://www.dewaweb.com/" target="_blank">
+            href="https://www.dewaweb.com/" target="_blank" rel="noopener">
             <p class=" p-0 text-xs">Powered By</p>
             <img class="w-36 mr-2" src="{{ asset('images/dewaweb.png') }}" alt="Dewaweb Backlink">
           </a>

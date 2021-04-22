@@ -77,7 +77,7 @@
                 <x-input id="accepted" class="block mr-2 w-1/20" type="checkbox" name="accepted" required />
 
                 <label for="accepted" class="block font-medium text-sm text-gray-700">I have read, understood, and
-                    accepted the <a href="{{ asset('guidebook.pdf') }}" target="_blank"
+                    accepted the <a href="{{ asset('guidebook.pdf') }}" target="_blank" rel="noopener"
                         class="underline text-gray-700">guidelines</a>.</label>
             </div>
 
