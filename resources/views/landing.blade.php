@@ -155,7 +155,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">19 April 2021 - 31 Mei 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">3 Mei 2021 - 14 Juni 2021</h3>
                 <p class="leading-tight text-left">
                   Pendaftaran
                 </p>
@@ -178,7 +178,7 @@
                 </div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">21 Juni 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">12 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Seminar <i>Improving Society with Code</i>
                 </p>
@@ -187,7 +187,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">22-25 Juni 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">13-16 Juni 2021</h3>
                 <p class="leading-tight text-left">
                   Workshop
                 </p>
@@ -208,7 +208,7 @@
                 <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">21 Juni - 5 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">12 Juni - 30 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Pelaksanaan Lomba
                 </p>
@@ -217,7 +217,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">1-8 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">23-30 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Pengumpulan karya dan Pernyataan Orisinalitas Karya
                 </p>
@@ -239,7 +239,7 @@
                 </div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">9 Juli 2021 - 13 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">31 Juli 2021 - 7 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Penilaian Karya
                 </p>
@@ -248,7 +248,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">13 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">9 Agustus 2021</h3>
                 <p class="leading-tight text-left">
                   Pengumuman Finalis
                 </p>
@@ -270,7 +270,7 @@
                 </div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">15 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">12 Agustus 2021</h3>
                 <p class="leading-tight text-left">
                   Presentasi Finalis
                 </p>
@@ -279,7 +279,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">16 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">13 Agustus 2021</h3>
                 <p class="leading-tight text-left">
                   Pengumuman Juara
                 </p>
@@ -328,7 +328,7 @@
             </h2>
             <div class="mt-3 text-gray-800 text-base px-6 mb-5">
               <ul class="text-sm list-decimal p-4">
-                <li>Peserta WAJIB merupakan Mahasiswa aktif jurusan IT.</li>
+                <li>Peserta WAJIB merupakan Mahasiswa aktif S1 jurusan IT.</li>
                 <li>Peserta merupakan tim yang terdiri dari tepat 3 anggota.</li>
                 <li>Semua anggota tim WAJIB mengunggah Kartu Tanda Mahasiswa yang nanti akan diverifikasi oleh admin.
                 </li>
@@ -361,8 +361,8 @@
                 2<sup>nd</sup>
               </h2>
               <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">UI/UX: Rp 300.000 dan Beasiswa DP3 50%</li>
-                <li class="border-b py-4">App Development: Rp 500.000</li>
+                <li class="border-b py-4">UI/UX: Rp 500.000 dan Beasiswa DP3 50%</li>
+                <li class="border-b py-4">App Development: Rp 1.000.000</li>
               </ul>
             </div>
           </div>
@@ -373,8 +373,8 @@
               </h2>
               <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
               <ul class="w-full text-center text-base font-bold">
-                <li class="border-b py-6">UI/UX: Rp 400.000 dan Beasiswa DP3 100%</li>
-                <li class="border-b py-6">App Development: Rp 750.000</li>
+                <li class="border-b py-6">UI/UX: Rp 700.000 dan Beasiswa DP3 100%</li>
+                <li class="border-b py-6">App Development: Rp 1.000.000</li>
               </ul>
             </div>
           </div>
@@ -384,8 +384,8 @@
                 3<sup>rd</sup>
               </h2>
               <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">UI/UX: Rp 150.000 dan Beasiswa DP3 50%</li>
-                <li class="border-b py-4">App Development: Rp 250.000</li>
+                <li class="border-b py-4">UI/UX: Rp 300.000 dan Beasiswa DP3 50%</li>
+                <li class="border-b py-4">App Development: Rp 600.000</li>
               </ul>
             </div>
           </div>
@@ -462,6 +462,10 @@
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="https://www.instagram.com/himfo.binusmlg/" target="_blank" rel="noopener"
                 class="no-underline hover:underline text-gray-800">Instagram</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="https://www.youtube.com/channel/UCv5_20gYnK6uv4bp3ESSO9w" target="_blank" rel="noopener"
+                class="no-underline hover:underline text-gray-800">Youtube</a>
             </li>
           </ul>
         </div>
