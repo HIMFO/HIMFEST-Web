@@ -13,8 +13,13 @@ class TeamController extends Controller
     public function create() {
         $team = Team::find(Auth::user()->id);
         $memberAmount = count($team->members);
+        $currentDate = strtotime(date('Y-m-d'));
+        $submissionStart = strtotime(date('2021-07-23'));
+        $submissionEnd = strtotime(date('2021-07-30'));
+
+        $isSubmissionDate = $currentDate >= $submissionStart && $currentDate <= $submissionEnd;
         
-        return view('dashboard', ['team' => $team, 'memberAmount' => $memberAmount]);
+        return view('dashboard', ['team' => $team, 'memberAmount' => $memberAmount, 'isSubmissionDate' => $isSubmissionDate]);
     }
 
     public function addNewMember(Request $request) {
@@ -41,7 +46,7 @@ class TeamController extends Controller
         // validate request
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
+            'email' => 'required|string|email|max:255|unique:members',
             'lineid' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
         ]);

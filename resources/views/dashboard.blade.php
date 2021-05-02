@@ -8,16 +8,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ $message }}</strong>
-            </div>
-            @endif
+            <x-flash-message class="mb-4" :message="isset($message) ? $message : null" />
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
             <div class="flex flex-row space-x-3">
+                @if($team->payment_status == 'pending')
                 <div class="flex-1 p-6 bg-white border-b border-gray-200">
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
                         @csrf
 
@@ -35,9 +31,9 @@
                         </x-button>
                     </form>
                 </div>
-
+                @endif
+                @if($team->verified && $isSubmissionDate)
                 <div class="flex-1 p-6 bg-white border-b border-gray-200">
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
                         @csrf
 
@@ -55,12 +51,13 @@
                         </x-button>
                     </form>
                 </div>
+                @endif
+
             </div>
 
             <div class="flex flex-row space-x-4">
                 <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     First Member (Team Leader)
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.update-member') }}"
                         class="mt-3">
@@ -119,7 +116,6 @@
 
                 <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     Second Member
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.update-member') }}"
                         class="mt-3">
@@ -179,7 +175,6 @@
 
                 <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     Third Member
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.update-member') }}"
                         class="mt-3">
@@ -236,6 +231,11 @@
                         </x-button>
                     </form>
                 </div>
+            </div>
+
+            <div class="flex w-full justify-center items-center text-white text-sm mt-12">
+                Having a trouble? Email us at <a href="mailto:contact@himfobinus.com"
+                    class="no-underline hover:underline text-white ml-1">contact@himfobinus.com</a>
             </div>
         </div>
     </div>

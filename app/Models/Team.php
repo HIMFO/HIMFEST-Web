@@ -22,6 +22,7 @@ class Team extends Authenticatable
     protected $fillable = [
         'name',
         'password',
+        'category',
         'referrer',
         'payment_proof_file_path',
         'submission_file_path',

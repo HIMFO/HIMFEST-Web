@@ -41,13 +41,7 @@ class RegisteredUserController extends Controller
             'referrer' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:8',
         ]);
-
-        if(Team::where('name','=', $request->name)->exists()){
-            if(Team::where('category','=',$request->category)->exists()){
-                return back()->with('fail','Team name has already been used.');
-            }
-        }
-
+        
         $member = Member::create([
             'name' => $request->leader_name,
             'email' => $request->email,
