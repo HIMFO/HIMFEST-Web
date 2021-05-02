@@ -53,6 +53,12 @@
                 <x-select id="referrer" class="block mt-1 w-full" name="referrer" :value="old('referrer')" required>
                     <option value="HIMFO">HIMFO</option>
                     <option value="HIMTI">HIMTI</option>
+                    <option value="HIMTI">Amazing Malang</option>
+                    <option value="HIMTI">Olimpiade Update</option>
+                    <option value="HIMTI">Ruang Mahasiswa</option>
+                    <option value="HIMTI">Info Lomba</option>
+                    <option value="HIMTI">Info Lomba Malang</option>
+                    <option value="HIMTI">Acara Kampus</option>
                 </x-select>
             </div>
 
