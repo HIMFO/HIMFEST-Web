@@ -91,7 +91,7 @@ class FileController extends Controller
             $team = Team::find($request->teamid);
             $team->payment_status = $request->status;
             $team->save();
-
+            
             return back()->with('success','Team has been successfully verified!');
         }
         else if($request->type == 'member') {

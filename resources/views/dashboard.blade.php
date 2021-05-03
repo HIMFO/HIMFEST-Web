@@ -11,49 +11,47 @@
             <x-flash-message class="mb-4" :message="isset($message) ? $message : null" />
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            <div class="flex flex-row space-x-3">
-                @if($team->payment_status == 'pending')
-                <div class="flex-1 p-6 bg-white border-b border-gray-200">
-                    <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
-                        @csrf
+            @if(!$team->payment_status)
+            <div class="p-6 bg-white border-b border-gray-200">
+                <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
+                    @csrf
 
-                        Upload your payment proof here!
-                        <div class="my-4">
-                            <x-label for="file" :value="__('Payment Proof')" />
+                    Upload your payment proof here!
+                    <div class="my-4">
+                        <x-label for="file" :value="__('Payment Proof')" />
 
-                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
-                                required />
-                        </div>
-                        <input id="type" type="hidden" name="type" value="payment_proof" />
+                        <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
+                            required />
+                    </div>
+                    <input id="type" type="hidden" name="type" value="payment_proof" />
 
-                        <x-button class="mt-2">
-                            {{ __('Submit') }}
-                        </x-button>
-                    </form>
-                </div>
-                @endif
-                @if($team->verified && $isSubmissionDate)
-                <div class="flex-1 p-6 bg-white border-b border-gray-200">
-                    <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
-                        @csrf
-
-                        Submit your work here!
-                        <div class="my-4">
-                            <x-label for="file" :value="__('Submission')" />
-
-                            <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
-                                required />
-                        </div>
-                        <input id="type" type="hidden" name="type" value="submission" />
-
-                        <x-button class="mt-2">
-                            {{ __('Submit') }}
-                        </x-button>
-                    </form>
-                </div>
-                @endif
-
+                    <x-button class="mt-2">
+                        {{ __('Submit') }}
+                    </x-button>
+                </form>
             </div>
+            @endif
+            @if($team->payment_status && $team->members[0]->verified && count($team->members) == 3 &&
+            $team->members[1]->verified && $team->members[2]->verified && $isSubmissionDate)
+            <div class="flex-1 p-6 bg-white border-b border-gray-200">
+                <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
+                    @csrf
+
+                    Submit your work here!
+                    <div class="my-4">
+                        <x-label for="file" :value="__('Submission')" />
+
+                        <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
+                            required />
+                    </div>
+                    <input id="type" type="hidden" name="type" value="submission" />
+
+                    <x-button class="mt-2">
+                        {{ __('Submit') }}
+                    </x-button>
+                </form>
+            </div>
+            @endif
 
             <div class="flex flex-row space-x-4">
                 <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -108,7 +106,7 @@
 
                         <x-input id="id" type="hidden" name="id" value='{{ $team->members[0]->id ?? null }}' />
                         <x-input id="type" type="hidden" name="type" value="student_card" />
-                        <x-button class="mt-4">
+                        <x-button class="mt-4" disabled="{{ $team->members[0]->verified }}">
                             {{ __('Update') }}
                         </x-button>
                     </form>
@@ -167,13 +165,14 @@
                         <x-input id="id" type="hidden" name="id"
                             value="{{ isset($team->members[1]) ? $team->members[1]->id : null }}" />
                         <x-input id="type" type="hidden" name="type" value="student_card" />
-                        <x-button class="mt-4">
+                        <x-button class="mt-4"
+                            disabled="{{ isset($team->members[1]) ? $team->members[1]->verified : '' }}">
                             {{ __('Update') }}
                         </x-button>
                     </form>
                 </div>
 
-                <div class="flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class=" flex-1 mt-3 p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     Third Member
 
                     <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.update-member') }}"
@@ -226,14 +225,15 @@
                         <x-input id="id" type="hidden" name="id"
                             value="{{ isset($team->members[2]) ? $team->members[2]->id : null }}" />
                         <x-input id="type" type="hidden" name="type" value="student_card" />
-                        <x-button class="mt-4">
+                        <x-button class="mt-4"
+                            disabled="{{ isset($team->members[2]) ? $team->members[2]->verified : '' }}">
                             {{ __('Update') }}
                         </x-button>
                     </form>
                 </div>
             </div>
 
-            <div class="flex w-full justify-center items-center text-white text-sm mt-12">
+            <div class=" flex w-full justify-center items-center text-white text-sm mt-12">
                 Having a trouble? Email us at <a href="mailto:contact@himfobinus.com"
                     class="no-underline hover:underline text-white ml-1">contact@himfobinus.com</a>
             </div>

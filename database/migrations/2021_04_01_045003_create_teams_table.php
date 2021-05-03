@@ -22,8 +22,7 @@ class CreateTeamsTable extends Migration
             $table->string('referrer', 255)->default('HIMFO');
             $table->string('payment_proof_file_path', 255)->nullable();
             $table->string('submission_file_path', 255)->nullable();
-            $table->string('payment_status', 255)->default('pending'); //(pending, verified, declined)
-            $table->boolean('verified')->default(0);
+            $table->boolean('payment_status')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
