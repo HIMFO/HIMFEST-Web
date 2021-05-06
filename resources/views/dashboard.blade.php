@@ -17,6 +17,10 @@
                     @csrf
 
                     Upload your payment proof here!
+                    <p class="mt-1 text-sm text-red-600">(Pembayaran biaya pendaftaran sebesar
+                        {{ $team->category == "Mahasiswa" ? "Rp100.000,-" : "Rp50.000,-" }}
+                        ke 4400200209 (BCA a.n. Putri
+                        Aurelia Shilo))</p>
                     <div class="my-4">
                         <x-label for="file" :value="__('Payment Proof')" />
 

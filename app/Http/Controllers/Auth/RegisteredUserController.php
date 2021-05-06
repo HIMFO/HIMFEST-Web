@@ -37,6 +37,8 @@ class RegisteredUserController extends Controller
             'name' => 'required|string|max:255|unique:teams',
             'leader_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:members',
+            'lineid' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
             'category' => 'required|string|max:255',
             'referrer' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:8',
@@ -45,6 +47,8 @@ class RegisteredUserController extends Controller
         $member = Member::create([
             'name' => $request->leader_name,
             'email' => $request->email,
+            'lineid' => $request->lineid,
+            'phone' => $request->phone,
         ]);
 
         $team = Team::create([

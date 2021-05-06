@@ -36,6 +36,21 @@
                     required />
             </div>
 
+            <!-- Team Leader's Line ID -->
+            <div class="mt-4">
+                <x-label for="lineid" :value="__('Team Leader\'s Line ID')" />
+
+                <x-input id="lineid" class="block mt-1 w-full" type="text" name="lineid" :value="old('lineid')"
+                    required />
+            </div>
+
+            <!-- Team Leader's Phone Number -->
+            <div class="mt-4">
+                <x-label for="phone" :value="__('Team Leader\'s Phone Number')" />
+
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required />
+            </div>
+
             <!-- Category -->
             <div class="mt-4">
                 <x-label for="category" :value="__('Category')" />
@@ -53,12 +68,11 @@
                 <x-select id="referrer" class="block mt-1 w-full" name="referrer" :value="old('referrer')" required>
                     <option value="HIMFO">HIMFO</option>
                     <option value="HIMTI">HIMTI</option>
-                    <option value="HIMTI">Amazing Malang</option>
-                    <option value="HIMTI">Olimpiade Update</option>
-                    <option value="HIMTI">Ruang Mahasiswa</option>
-                    <option value="HIMTI">Info Lomba</option>
                     <option value="HIMTI">Info Lomba Malang</option>
-                    <option value="HIMTI">Acara Kampus</option>
+                    <option value="HIMTI">Olimpiade Update</option>
+                    <option value="HIMTI">Acarakampus.id</option>
+                    <option value="HIMTI">Info Lomba</option>
+                    <option value="HIMTI">Ruang Mahasiswa</option>
                 </x-select>
             </div>
 
