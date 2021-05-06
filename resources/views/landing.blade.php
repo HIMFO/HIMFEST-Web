@@ -62,20 +62,20 @@
     <section id="#" class="pt-24">
       <div class="container px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
-        <div class="w-full md:w-3/5 py-6 text-center flex justify-center items-center">
-          <img class="w-1/2" src="images/hero.png" alt="HIMFEST 2021" />
-        </div>
-        <!--Right Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <h1 class="my-4 w-full text-5xl font-bold leading-tight">
-            Show Your Passion!
+          <h1 class="my-4 w-full lg:text-5xl text-3xl font-bold leading-tight">
+            Improving Society with Code
           </h1>
-          <p class="leading-normal w-full text-2xl mb-8">
-            Create an amazing project and win amazing prizes!
+          <p class="leading-normal w-full lg:text-2xl text-l mb-8">
+            Solve real world problems and create an amazing solution to win amazing prizes!
           </p>
-          <x-action-button :link="route('register')" id="navAction" class="text-gray-800 mb-16">
+          <x-action-button :link="route('register')" id="navAction" class="text-gray-800 mb-16 md:ml-0">
             {{ __('Get Started') }}
           </x-action-button>
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-3/5 py-6 text-center flex justify-center items-center">
+          <img class="w-full" src="images/hero.png" alt="HIMFEST 2021" />
         </div>
       </div>
 
@@ -118,7 +118,7 @@
               UI/UX Competition
             </h3>
             <p class="text-gray-600 mb-8">
-              Lomba perancangan mockup UI/UX tingkat SMA.
+              Lomba perancangan mockup UI/UX tingkat SMA/SMK.
             </p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
@@ -135,6 +135,32 @@
             </h3>
             <p class="text-gray-600 mb-8">
               Lomba pengembangan aplikasi berbasis web atau mobile tingkat Mahasiswa.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6 flex flex-col justify-center md:items-end">
+            <h3 class="text-3xl font-bold leading-none mb-3">
+              Webinar
+            </h3>
+            <p class="text-gray-600 mb-8 lg:text-right">
+              Webinar tentang bagaimana kita bisa mengembangkan masyarakat melalui kode.
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img class="w-auto sm:h-64 mx-auto" src="{{ asset('images/webinar.jpg') }}" alt="Webinar">
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-auto sm:w-1/2 p-6 mt-6">
+            <img class="w-5/6 sm:h-64 mx-auto" src="{{ asset('images/workshop.jpg') }}" alt="Workshop">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6 flex flex-col justify-center items-start">
+            <h3 class="text-3xl font-bold leading-none mb-3">
+              Hands-on Workshops
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Workshop UI/UX untuk siswa SMA/SMK dan workshop app development untuk Mahasiswa.
             </p>
           </div>
         </div>
@@ -180,7 +206,7 @@
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
                 <h3 class="font-semibold text-lg mb-1">12 Juli 2021</h3>
                 <p class="leading-tight text-left">
-                  Seminar <i>Improving Society with Code</i>
+                  Webinar "Improving Society with Code" & Technical Meeting
                 </p>
               </div>
             </div>
