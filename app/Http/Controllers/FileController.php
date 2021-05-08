@@ -84,22 +84,4 @@ class FileController extends Controller
             return back()->with('fail','There is no chosen file available yet!');
         }
     }
-
-    public function verify(Request $request) {
-        
-        if($request->type == 'team') {
-            $team = Team::find($request->teamid);
-            $team->payment_status = $request->status;
-            $team->save();
-            
-            return back()->with('success','Team has been successfully verified!');
-        }
-        else if($request->type == 'member') {
-            $member = Member::find($request->teamid);
-            $member->verified = $request->status;
-            $member->save();
-
-            return back()->with('success','Member has been successfully verified!');
-        }
-    }
 }

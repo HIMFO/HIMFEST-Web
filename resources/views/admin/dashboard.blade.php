@@ -25,8 +25,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?php echo asset('css/admindashboard.css')?>">
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> <!--Replace with your tailwind.css once created-->
-	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        .gradient {
+            background: linear-gradient(90deg, #1488CC 0%, #2B32B2 100%);
+        }
+    </style>
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <!--Totally optional :) -->
 
     @livewireStyles
 </head>
@@ -34,24 +42,25 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="bg-gray-800 p-2 mt-0 fixed w-full z-10 top-0">
+    <nav class="gradient p-2 mt-0 fixed w-full z-10 top-0">
         <div class="container mx-auto flex flex-wrap items-center">
-		    <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-				<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-					<span class="text-2xl pl-2"> Admin Panel </span><br>Welcome, {{ $admins }}</span>
-				</a>
+            <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+                <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+                    <span class="text-2xl pl-2"> Admin Panel </span><br>Welcome, {{ $admins }}</span>
+                </a>
             </div>
-			<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-				  <li class="mr-3">
-					<div class="inline-block py-2 px-4 text-white no-underline"><form action="{{ route('admin.logout') }}" method="POST">
-                 @csrf
-                <button type="submit">Logout</button>
-                </form>
-                    </div>
-				  </li>
-				</ul>
-			</div>
+            <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+                <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+                    <li class="mr-3">
+                        <div class="inline-block py-2 px-4 text-white no-underline">
+                            <form action="{{ route('admin.logout') }}" method="POST">
+                                @csrf
+                                <button type="submit">Logout</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         @if(Session::get('fail'))
         <div class="alert alert-danger alert-dismissible">
@@ -66,7 +75,7 @@
         </div>
         @endif
     </nav>
-        
+
     <!-- End of Navbar -->
 
     <!-- Body content -->

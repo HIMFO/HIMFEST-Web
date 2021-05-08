@@ -39,9 +39,13 @@ Route::post('/dashboard/download-file', [FileController::class, 'download'])
     ->middleware(['auth:admin'])
     ->name('dashboard.download-file');
 
-Route::post('/dashboard/verify-file', [FileController::class, 'verify'])
+Route::post('/dashboard/verify', [TeamController::class, 'verify'])
     ->middleware(['auth:admin'])
-    ->name('dashboard.verify-file');
+    ->name('dashboard.verify');
+
+Route::post('/dashboard/decline', [TeamController::class, 'decline'])
+    ->middleware(['auth:admin'])
+    ->name('dashboard.decline');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

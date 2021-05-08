@@ -23,6 +23,10 @@ class TeamController extends Controller
     }
 
     public function addNewMember(Request $request) {
+        $request->validate([
+            'email' => 'required|string|email|max:255|unique:members',
+        ]);
+
         $member = Member::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -46,7 +50,7 @@ class TeamController extends Controller
         // validate request
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:members',
+            'email' => 'required|string|email|max:255',
             'lineid' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
         ]);
@@ -69,5 +73,29 @@ class TeamController extends Controller
         return back()
             ->with('success','Member Updated')
             ->with('member', $member->name);
+    }
+
+    public function verify(Request $request) {
+        
+        if($request->type == 'team') {
+            $team = Team::find($request->teamid);
+            $team->payment_status = "verified";
+            $team->save();
+            
+            return back()->with('success','Team has been successfully verified!');
+        }
+        else if($request->type == 'member') {
+            $member = Member::find($request->teamid);
+            $member->verified = true;
+            $member->save();
+
+            return back()->with('success','Member has been successfully verified!');
+        }
+    }
+
+    public function decline(Request $request) {
+        $team = Team::find($request->teamid);
+        $team->payment_status = "declined";
+        $team->save();
     }
 }

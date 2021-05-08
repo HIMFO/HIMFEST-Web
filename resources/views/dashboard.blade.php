@@ -11,7 +11,7 @@
             <x-flash-message class="mb-4" :message="isset($message) ? $message : null" />
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            @if(!$team->payment_status)
+            @if($team->payment_status != 'verified')
             <div class="p-6 bg-white border-b border-gray-200">
                 <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
                     @csrf
@@ -21,7 +21,14 @@
                         {{ $team->category == "Mahasiswa" ? "Rp100.000,-" : "Rp50.000,-" }}
                         ke 4400200209 (BCA a.n. Putri
                         Aurelia Shilo))</p>
+                    @if($team->payment_proof_file_path == '' || $team->payment_status == 'declined')
                     <div class="my-4">
+                        @if($team->payment_status == 'declined')
+                        <p class="my-2">
+                            Bukti pembayaran yang Anda upload telah kami tolak. Mohon upload bukti pembayaran
+                            yang tepat.
+                        </p>
+                        @endif
                         <x-label for="file" :value="__('Payment Proof')" />
 
                         <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
@@ -32,10 +39,18 @@
                     <x-button class="mt-2">
                         {{ __('Submit') }}
                     </x-button>
+                    @else
+                    <div class="my-4">
+                        <p>
+                            Pembayaran Anda sedang kami verifikasi, mohon tunggu. Ketika pembayaran Anda telah
+                            terverifikasi, kolom upload bukti pembayaran ini akan hilang.
+                        </p>
+                    </div>
+                    @endif
                 </form>
             </div>
             @endif
-            @if($team->payment_status && $team->members[0]->verified && count($team->members) == 3 &&
+            @if($team->payment_status == 'verified' && $team->members[0]->verified && count($team->members) == 3 &&
             $team->members[1]->verified && $team->members[2]->verified && $isSubmissionDate)
             <div class="flex-1 p-6 bg-white border-b border-gray-200">
                 <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">

@@ -161,7 +161,8 @@ header {
     padding-left: 45%;
 }
 
-.verify_btn {
+.verify_btn,
+.decline_btn {
     font-size: 150%;
     border: 0;
     background: none;
