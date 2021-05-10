@@ -400,7 +400,7 @@
               <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
               <ul class="w-full text-center text-base font-bold">
                 <li class="border-b py-6">UI/UX: Rp 700.000 dan Beasiswa DP3 100%</li>
-                <li class="border-b py-6">App Development: Rp 1.000.000</li>
+                <li class="border-b py-6">App Development: Rp 1.400.000</li>
               </ul>
             </div>
           </div>

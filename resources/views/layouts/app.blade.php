@@ -31,13 +31,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/435e55727b.js" crossorigin="anonymous"></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap"
         rel="stylesheet">
 
-    <!-- Styles -->
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         .gradient {
@@ -45,6 +48,7 @@
         }
     </style>
 
+    <!-- Custom Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     @livewireStyles

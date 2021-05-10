@@ -69,6 +69,7 @@
                     <option value="HIMFO">HIMFO</option>
                     <option value="HIMTI">HIMTI</option>
                     <option value="HIMTI">Info Lomba Malang</option>
+                    <option value="HIMTI">Event Pelajar</option>
                     <option value="HIMTI">Olimpiade Update</option>
                     <option value="HIMTI">Acarakampus.id</option>
                     <option value="HIMTI">Info Lomba</option>
