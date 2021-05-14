@@ -66,14 +66,21 @@
                 <x-label for="referrer" :value="__('From Whom Did You Find Out About HIMFEST?')" />
 
                 <x-select id="referrer" class="block mt-1 w-full" name="referrer" :value="old('referrer')" required>
-                    <option value="HIMFO">HIMFO</option>
-                    <option value="HIMTI">HIMTI</option>
-                    <option value="Info Lomba Malang">Info Lomba Malang</option>
-                    <option value="Event Pelajar">Event Pelajar</option>
-                    <option value="Olimpiade Update">Olimpiade Update</option>
-                    <option value="Acarakampus.id">Acarakampus.id</option>
-                    <option value="Info Lomba">Info Lomba</option>
-                    <option value="Ruang Mahasiswa">Ruang Mahasiswa</option>
+                    <optgroup label="Media Partners" class="text-sm">
+                        <option value="Info Lomba Malang">Info Lomba Malang</option>
+                        <option value="Event Pelajar">Event Pelajar</option>
+                        <option value="Olimpiade Update">Olimpiade Update</option>
+                        <option value="RPL-GDC Laboratory">RPL-GDC Laboratory</option>
+                        <option value="HIMTI">HIMTI</option>
+                        <option value="Acarakampus.id">Acarakampus.id</option>
+                        <option value="Info Lomba">Info Lomba</option>
+                        <option value="Ruang Mahasiswa">Ruang Mahasiswa</option>
+                    </optgroup>
+                    <optgroup label="Other" class="text-sm">
+                        <option value="HIMFO">HIMFO</option>
+                        <option value="Binus">Binus</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </optgroup>
                 </x-select>
             </div>
 
