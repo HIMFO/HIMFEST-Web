@@ -20,7 +20,10 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $currentDate = strtotime(date('Y-m-d'));
+        $registrationEnd = strtotime(date('2021-06-15'));
+        $registrationEnded = $currentDate == $registrationEnd;
+        return view('auth.register', ['registrationEnded' => $registrationEnded]);
     }
 
     /**

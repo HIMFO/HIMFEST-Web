@@ -118,7 +118,6 @@
 
                         <div class="my-4">
                             <x-label for="file" :value="__('Student Card')" />
-
                             <x-input id="file" class="block mt-1 w-full" type="file" name="file" :value="old('file')"
                                 required disabled="{{ $team->members[0]->verified }}" />
                         </div>

@@ -6,6 +6,13 @@
             </a>
         </x-slot>
 
+        @if($registrationEnded)
+        <div class="text-center">
+            <p>Sorry, registration has been closed :(</p>
+            Click <a href="/" class="underline">here</a> to go back to home page.
+        </div>
+        @else
+
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -119,5 +126,7 @@
                 </x-button>
             </div>
         </form>
+        @endif
+
     </x-auth-card>
 </x-guest-layout>
