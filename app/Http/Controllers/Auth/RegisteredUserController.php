@@ -22,7 +22,7 @@ class RegisteredUserController extends Controller
     {
         $currentDate = strtotime(date('Y-m-d'));
         $registrationEnd = strtotime(date('2021-06-15'));
-        $registrationEnded = $currentDate == $registrationEnd;
+        $registrationEnded = $currentDate >= $registrationEnd;
         return view('auth.register', ['registrationEnded' => $registrationEnded]);
     }
 
