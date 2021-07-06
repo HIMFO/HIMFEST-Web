@@ -213,7 +213,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div class="bg-indigo-400 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">13-16 Juni 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">13-16 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Workshop
                 </p>
@@ -234,7 +234,7 @@
                 <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">12 Juni - 30 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">12-30 Juli 2021</h3>
                 <p class="leading-tight text-left">
                   Pelaksanaan Lomba
                 </p>
@@ -265,7 +265,7 @@
                 </div>
               </div>
               <div class="bg-indigo-400 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 class="font-semibold text-lg mb-1">31 Juli 2021 - 7 Juli 2021</h3>
+                <h3 class="font-semibold text-lg mb-1">31 Juli 2021 - 7 Agustus 2021</h3>
                 <p class="leading-tight text-left">
                   Penilaian Karya
                 </p>
