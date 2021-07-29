@@ -56,7 +56,7 @@
                 <form enctype="multipart/form-data" method="POST" action="{{ route('dashboard.upload-file') }}">
                     @csrf
 
-                    Submit your work here!
+                    Submit your work here! (Format: pdf/docx/doc | Max Size: 2MB);
                     <div class="my-4">
                         <x-label for="file" :value="__('Submission')" />
 

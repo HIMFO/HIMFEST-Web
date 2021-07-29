@@ -15,15 +15,15 @@ class FileController extends Controller
     }
 
     public function store(Request $request) {
-        $request->validate([
-            'file' => 'required|mimes:pdf,doc,docx,jpg,jpeg,png|max:2048',
-        ]);
-        
         $team = Team::find(Auth::user()->id);
 
         $fileName = time().'_'.$request->file->getClientOriginalName();
 
         if($request->type == 'submission') {
+            $request->validate([
+                'file' => 'required|mimes:pdf,doc,docx|max:5012',
+            ]);
+
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
@@ -36,6 +36,10 @@ class FileController extends Controller
             ->with('success','File has been uploaded.')
             ->with('file', $fileName);
         } else if($request->type == 'payment_proof') {
+            $request->validate([
+                'file' => 'required|mimes:pdf,jpg,jpeg,png|max:5012',
+            ]);
+            
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
@@ -49,6 +53,10 @@ class FileController extends Controller
             ->with('success','File has been uploaded.')
             ->with('file', $fileName);
         } else if($request->type == 'student_card') {
+            $request->validate([
+                'file' => 'required|mimes:pdf,jpg,jpeg,png|max:5012',
+            ]);
+
             $file = File::create([
                 'name' => $fileName,
                 'type' => $request->type,
